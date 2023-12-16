@@ -16,6 +16,7 @@ This site is developed with `mkdocs` which is similar to Hugo with an auto-reloa
 pip install mkdocs
 pip install mkdocs-material
 pip install pymdown-extensions
+pip install mkdocs-static-i18n
 ```
 
 For more details or assistance setting up, see:
