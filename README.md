@@ -23,7 +23,7 @@ For more details or assistance setting up, see:
 * **mkdocs** - https://www.mkdocs.org/user-guide/installation/#installing-mkdocs
 * **mkdocs-material** - https://squidfunk.github.io/mkdocs-material/getting-started/
 * **pymdown-extensions** - https://facelessuser.github.io/pymdown-extensions/installation/
-* * **pymdown-extensions** - https://ultrabug.github.io/mkdocs-static-i18n/
+* **pymdown-extensions** - https://ultrabug.github.io/mkdocs-static-i18n/
 
 3) Build and run locally on http://127.0.0.1:8000/
 
