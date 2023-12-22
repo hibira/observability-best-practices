@@ -10,9 +10,13 @@
         <meta name="author" content="AWS">
       
       
-        <link rel="canonical" href="https://aws-observability.github.io/observability-best-practices/ja/recipes/recipes/eks-observability-accelerator/">
+        <link rel="canonical" href="https://aws-observability.github.io/observability-best-practices/ja/tools/logs/dataprotection/data-protection-policies/">
       
       
+        <link rel="prev" href="../../logs-insights-examples/">
+      
+      
+        <link rel="next" href="../../../metrics/">
       
       
       <link rel="icon" href="../../../../images/aws-logo.png">
@@ -20,14 +24,14 @@
     
     
       
-        <title>Amazon EKS Observability Accelerator のご紹介 - AWS Observability Best Practices</title>
+        <title>CloudWatch Logs Data Protection Policies for SLG/EDU - AWS Observability Best Practices</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -98,7 +102,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#amazon-eks-observability-accelerator" class="md-skip">
+        <a href="#cloudwatch-logs-slgedu" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -114,7 +118,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="ヘッダー">
-    <a href="../../.." title="AWS Observability Best Practices" class="md-header__button md-logo" aria-label="AWS Observability Best Practices" data-md-component="logo">
+    <a href="../../../.." title="AWS Observability Best Practices" class="md-header__button md-logo" aria-label="AWS Observability Best Practices" data-md-component="logo">
       
   <img src="../../../../images/aws-logo.png" alt="logo">
 
@@ -133,7 +137,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Amazon EKS Observability Accelerator のご紹介
+              CloudWatch Logs Data Protection Policies for SLG/EDU
             
           </span>
         </div>
@@ -246,7 +250,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="AWS Observability Best Practices" class="md-nav__button md-logo" aria-label="AWS Observability Best Practices" data-md-component="logo">
+    <a href="../../../.." title="AWS Observability Best Practices" class="md-nav__button md-logo" aria-label="AWS Observability Best Practices" data-md-component="logo">
       
   <img src="../../../../images/aws-logo.png" alt="logo">
 
@@ -275,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -332,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/" class="md-nav__link">
+      <a href="../../../../guides/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -353,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/choosing-a-tracing-agent/" class="md-nav__link">
+      <a href="../../../../guides/choosing-a-tracing-agent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -411,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/cost/kubecost/" class="md-nav__link">
+      <a href="../../../../guides/cost/kubecost/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -469,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/cost/cost-visualization/cost/" class="md-nav__link">
+      <a href="../../../../guides/cost/cost-visualization/cost/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -490,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/cost/cost-visualization/amazon-cloudwatch/" class="md-nav__link">
+      <a href="../../../../guides/cost/cost-visualization/amazon-cloudwatch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -511,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/cost/cost-visualization/amazon-grafana/" class="md-nav__link">
+      <a href="../../../../guides/cost/cost-visualization/amazon-grafana/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -532,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/cost/cost-visualization/amazon-prometheus/" class="md-nav__link">
+      <a href="../../../../guides/cost/cost-visualization/amazon-prometheus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -553,7 +557,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/cost/cost-visualization/aws-xray/" class="md-nav__link">
+      <a href="../../../../guides/cost/cost-visualization/AmazonManagedServiceforPrometheus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon Prometheus real-time cost monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/cost/cost-visualization/aws-xray/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -627,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/databases/rds-and-aurora/" class="md-nav__link">
+      <a href="../../../../guides/databases/rds-and-aurora/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -656,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/ec2/ec2-monitoring/" class="md-nav__link">
+      <a href="../../../../guides/ec2/ec2-monitoring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/containers/aws-native/ecs/best-practices-metrics-collection-1/" class="md-nav__link">
+      <a href="../../../../guides/containers/aws-native/ecs/best-practices-metrics-collection-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -772,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/containers/aws-native/ecs/best-practices-metrics-collection-2/" class="md-nav__link">
+      <a href="../../../../guides/containers/aws-native/ecs/best-practices-metrics-collection-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -838,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/containers/oss/ecs/best-practices-metrics-collection-1/" class="md-nav__link">
+      <a href="../../../../guides/containers/oss/ecs/best-practices-metrics-collection-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -859,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/containers/oss/ecs/best-practices-metrics-collection-2/" class="md-nav__link">
+      <a href="../../../../guides/containers/oss/ecs/best-practices-metrics-collection-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -970,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/containers/aws-native/eks/amazon-cloudwatch-container-insights/" class="md-nav__link">
+      <a href="../../../../guides/containers/aws-native/eks/amazon-cloudwatch-container-insights/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -991,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/containers/aws-native/eks/log-aggregation/" class="md-nav__link">
+      <a href="../../../../guides/containers/aws-native/eks/log-aggregation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1012,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/containers/aws-native/eks/eks-api-server-monitoring/" class="md-nav__link">
+      <a href="../../../../guides/containers/aws-native/eks/eks-api-server-monitoring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1033,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/containers/aws-native/eks/container-tracing-with-aws-xray/" class="md-nav__link">
+      <a href="../../../../guides/containers/aws-native/eks/container-tracing-with-aws-xray/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1099,7 +1124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/containers/oss/eks/best-practices-metrics-collection/" class="md-nav__link">
+      <a href="../../../../guides/containers/oss/eks/best-practices-metrics-collection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1135,8 +1160,95 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Serverless best practices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Serverless best practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../guides/hybrid-and-multicloud/" class="md-nav__link">
+      <a href="../../../../guides/serverless/aws-native/lambda-based-observability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Native
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/serverless/oss/lambda-based-observability-adot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open Source
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/hybrid-and-multicloud/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1166,10 +1278,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
         
           
-          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1180,8 +1292,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
             <span class="md-nav__icon md-icon"></span>
             Operational
           </label>
@@ -1203,10 +1315,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_1" >
         
           
-          <label class="md-nav__link" for="__nav_2_9_1" id="__nav_2_9_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_10_1" id="__nav_2_10_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1217,8 +1329,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_9_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10_1">
             <span class="md-nav__icon md-icon"></span>
             ADOT Collector
           </label>
@@ -1231,7 +1343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/operational/adot-at-scale/operating-adot-collector/" class="md-nav__link">
+      <a href="../../../../guides/operational/adot-at-scale/operating-adot-collector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1252,7 +1364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/operational/adot-at-scale/adot-java-spring/adot-java-spring/" class="md-nav__link">
+      <a href="../../../../guides/operational/adot-at-scale/adot-java-spring/adot-java-spring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1281,7 +1393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/operational/business/monitoring-for-business-outcomes/" class="md-nav__link">
+      <a href="../../../../guides/operational/business/monitoring-for-business-outcomes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1302,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/operational/business/sla-percentile/" class="md-nav__link">
+      <a href="../../../../guides/operational/business/sla-percentile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1323,7 +1435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/operational/business/key-performance-indicators/" class="md-nav__link">
+      <a href="../../../../guides/operational/business/key-performance-indicators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1353,10 +1465,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_9_5" id="__nav_2_9_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_10_5" id="__nav_2_10_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1367,8 +1479,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_9_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_10_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10_5">
             <span class="md-nav__icon md-icon"></span>
             Alerting
           </label>
@@ -1381,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/operational/alerting/amp-alertmgr/" class="md-nav__link">
+      <a href="../../../../guides/operational/alerting/amp-alertmgr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1419,10 +1531,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_6" >
         
           
-          <label class="md-nav__link" for="__nav_2_9_6" id="__nav_2_9_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_10_6" id="__nav_2_10_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1433,8 +1545,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_9_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_10_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10_6">
             <span class="md-nav__icon md-icon"></span>
             GitOps
           </label>
@@ -1447,11 +1559,77 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/operational/gitops-with-amg/gitops-with-amg/" class="md-nav__link">
+      <a href="../../../../guides/operational/gitops-with-amg/gitops-with-amg/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Grafana Operator with Amazon Managed Grafana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10_7" id="__nav_2_10_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dashboards
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_10_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10_7">
+            <span class="md-nav__icon md-icon"></span>
+            Dashboards
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cloudwatch-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CloudWatch Dashboard
   </span>
   
 
@@ -1493,10 +1671,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
         
           
-          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1507,8 +1685,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
             <span class="md-nav__icon md-icon"></span>
             Signal collection
           </label>
@@ -1521,7 +1699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/signal-collection/emf/" class="md-nav__link">
+      <a href="../../../../guides/signal-collection/emf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1559,10 +1737,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" >
         
           
-          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1573,8 +1751,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_11">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12">
             <span class="md-nav__icon md-icon"></span>
             Partners
           </label>
@@ -1587,7 +1765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/partners/databricks/" class="md-nav__link">
+      <a href="../../../../guides/partners/databricks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1601,9 +1779,312 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_12_2" id="__nav_2_12_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Databases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_12_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12_2">
+            <span class="md-nav__icon md-icon"></span>
+            Databases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/databases/rds-and-aurora/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aurora and RDS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_12_3" id="__nav_2_12_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cost
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_12_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cost
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/cost/kubecost/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Kubecost
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_12_3_2" id="__nav_2_12_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visualizing costs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_12_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Visualizing costs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/cost/cost-visualization/cost/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Observability services and Cost
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/cost/cost-visualization/amazon-cloudwatch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon CloudWatch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/cost/cost-visualization/amazon-grafana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon Grafana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/cost/cost-visualization/amazon-prometheus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon Prometheus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/cost/cost-visualization/aws-xray/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS X-Ray
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/observability-maturity-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Observability Maturity Model
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1660,7 +2141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../signals/logs/" class="md-nav__link">
+      <a href="../../../../signals/logs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1681,7 +2162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../signals/metrics/" class="md-nav__link">
+      <a href="../../../../signals/metrics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1702,7 +2183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../signals/traces/" class="md-nav__link">
+      <a href="../../../../signals/traces/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1723,7 +2204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../signals/alarms/" class="md-nav__link">
+      <a href="../../../../signals/alarms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1744,7 +2225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../signals/events/" class="md-nav__link">
+      <a href="../../../../signals/events/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1769,19 +2250,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -1795,7 +2278,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Tools
@@ -1809,7 +2292,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/cloudwatch_agent/" class="md-nav__link">
+      <a href="../../../observability_accelerator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Observability Accelerator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cloudwatch_agent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1830,7 +2334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/alarms/" class="md-nav__link">
+      <a href="../../../alarms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1851,7 +2355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/dashboards/" class="md-nav__link">
+      <a href="../../../dashboards/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1872,7 +2376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/internet_monitor/" class="md-nav__link">
+      <a href="../../../internet_monitor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1890,22 +2394,24 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1916,8 +2422,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_6">
             <span class="md-nav__icon md-icon"></span>
             Logs
           </label>
@@ -1930,7 +2436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/logs/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1951,7 +2457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/logs/logs-insights-examples/" class="md-nav__link">
+      <a href="../../logs-insights-examples/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1960,6 +2466,174 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_6_3" id="__nav_4_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Protection
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Data Protection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    CloudWatch Logs Data Protection Policies for SLG/EDU
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    CloudWatch Logs Data Protection Policies for SLG/EDU
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      データ型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="データ型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      認証情報
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      金融情報
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phi" class="md-nav__link">
+    <span class="md-ellipsis">
+      個人識別保健情報(PHI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pii" class="md-nav__link">
+    <span class="md-ellipsis">
+      個人を特定できる情報(PII)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      マスクされたログ
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1980,7 +2654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/metrics/" class="md-nav__link">
+      <a href="../../../metrics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2001,7 +2675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/rum/" class="md-nav__link">
+      <a href="../../../rum/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2022,7 +2696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/synthetics/" class="md-nav__link">
+      <a href="../../../synthetics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2043,7 +2717,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/xray/" class="md-nav__link">
+      <a href="../../../slos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Service Level Objectives (SLOs)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xray/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2108,7 +2803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../../../recipes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2129,7 +2824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dimensions/" class="md-nav__link">
+      <a href="../../../../recipes/dimensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2150,7 +2845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../telemetry/" class="md-nav__link">
+      <a href="../../../../recipes/telemetry/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2208,7 +2903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../apprunner/" class="md-nav__link">
+      <a href="../../../../recipes/apprunner/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2229,7 +2924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eks/" class="md-nav__link">
+      <a href="../../../../recipes/eks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2250,7 +2945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecs/" class="md-nav__link">
+      <a href="../../../../recipes/ecs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2271,7 +2966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lambda/" class="md-nav__link">
+      <a href="../../../../recipes/lambda/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2337,7 +3032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infra/" class="md-nav__link">
+      <a href="../../../../recipes/infra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2395,7 +3090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rds/" class="md-nav__link">
+      <a href="../../../../recipes/rds/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2416,7 +3111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dynamodb/" class="md-nav__link">
+      <a href="../../../../recipes/dynamodb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2437,7 +3132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../msk/" class="md-nav__link">
+      <a href="../../../../recipes/msk/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2511,7 +3206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../java/" class="md-nav__link">
+      <a href="../../../../recipes/java/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2532,7 +3227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nodejs/" class="md-nav__link">
+      <a href="../../../../recipes/nodejs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2598,7 +3293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cw/" class="md-nav__link">
+      <a href="../../../../recipes/cw/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2619,7 +3314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../amp/" class="md-nav__link">
+      <a href="../../../../recipes/amp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2640,7 +3335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../amg/" class="md-nav__link">
+      <a href="../../../../recipes/amg/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2661,7 +3356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aes/" class="md-nav__link">
+      <a href="../../../../recipes/aes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2727,7 +3422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../anomaly-detection/" class="md-nav__link">
+      <a href="../../../../recipes/anomaly-detection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2748,7 +3443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../alerting/" class="md-nav__link">
+      <a href="../../../../recipes/alerting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2769,7 +3464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/" class="md-nav__link">
+      <a href="../../../../recipes/troubleshooting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2790,7 +3485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workshops/" class="md-nav__link">
+      <a href="../../../../recipes/workshops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2863,7 +3558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../faq/faq/" class="md-nav__link">
+      <a href="../../../../faq/faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2884,7 +3579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../faq/cloudwatch/" class="md-nav__link">
+      <a href="../../../../faq/cloudwatch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2905,7 +3600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../faq/x-ray/" class="md-nav__link">
+      <a href="../../../../faq/x-ray/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2926,7 +3621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../faq/amp/" class="md-nav__link">
+      <a href="../../../../faq/amp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2947,7 +3642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../faq/amg/" class="md-nav__link">
+      <a href="../../../../faq/amg/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2968,7 +3663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../faq/adot/" class="md-nav__link">
+      <a href="../../../../faq/adot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2996,7 +3691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributors/" class="md-nav__link">
+      <a href="../../../../contributors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3038,71 +3733,44 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      前提条件
+      データ型
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      デプロイ手順
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="デプロイ手順">
+    <nav class="md-nav" aria-label="データ型">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      ステップ 1: リポジトリのクローン
+      認証情報
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-grafana-api" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      ステップ 2: Grafana API キーの生成
+      金融情報
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#phi" class="md-nav__link">
     <span class="md-ellipsis">
-      ステップ 3: 環境の設定
+      個人識別保健情報(PHI)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-terraform" class="md-nav__link">
+  <a href="#pii" class="md-nav__link">
     <span class="md-ellipsis">
-      ステップ 4: Terraform モジュールのデプロイ
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-javajmx" class="md-nav__link">
-    <span class="md-ellipsis">
-      ステップ 5: サンプル Java/JMX アプリケーションのデプロイ
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-amazon-managed-grafana-jmx" class="md-nav__link">
-    <span class="md-ellipsis">
-      ステップ 6: Amazon Managed Grafana で JMX メトリクスを視覚化する
+      個人を特定できる情報(PII)
     </span>
   </a>
   
@@ -3114,18 +3782,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      クリーンアップ
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      結論
+      マスクされたログ
     </span>
   </a>
   
@@ -3149,204 +3808,99 @@
   
 
 
-<h1 id="amazon-eks-observability-accelerator">Amazon EKS Observability Accelerator のご紹介<a class="headerlink" href="#amazon-eks-observability-accelerator" title="Permanent link">&para;</a></h1>
-<p>オブザーバビリティは、あらゆるアプリケーションにとって重要であり、システムの動作とパフォーマンスを理解する上で欠かせません。パフォーマンスの低下や中断を検出して修正するのに時間と労力がかかります。お客様は設定ファイルの作成とアプリケーションのエンドツーエンド監視の実現に多くの時間を費やしています。AWS の <a href="https://docs.aws.amazon.com/cloudformation/index.html">CloudFormation</a>、<a href="https://www.terraform.io/">Terraform</a>、<a href="https://www.ansible.com/">Ansible</a> などのインフラストラクチャ as コード (IaC) ツールは、管理者と開発者が設定ファイルを使用してインフラストラクチャをインスタンス化できるようにすることで、手動作業を軽減します。</p>
-<p><a href="https://docs.aws.amazon.com/eks/index.html">Amazon Elastic Kubernetes Service(Amazon EKS)</a> は、スケールアウトしたコンテナ化アプリケーションのデプロイと管理を可能にする強力で拡張性の高いコンテナオーケストレーションテクノロジーです。幅広いツールと設計オプションからアプリケーションのニーズを満たす <a href="https://docs.aws.amazon.com/eks/index.html">Amazon EKS</a> クラスタを構築するのにかなりの時間がかかる場合があります。オブザーバビリティの実装はあらゆるアプリケーションのパフォーマンス分析に不可欠ですが、これにより状況はさらに面倒になります。 </p>
-<p>お客様からは、Amazon EKS 上でのさまざまなオープンソースツールの統合例と、特定のアプリケーション要件のベストプラクティスを組み込んだオブザーバビリティソリューションの構成例を要望されています。2022年5月17日に、AWS は EKS Observability Accelerator を発表しました。これは、Terraform モジュールを使用して、特定のワークロード向けの Amazon EKS クラスタ上に目的構築型のオブザーバビリティソリューションを構成およびデプロイするために使用されます。お客様はこのソリューションを使用して、<a href="https://docs.aws.amazon.com/prometheus/">Amazon Managed Service for Prometheus</a>、<a href="https://aws.amazon.com/otel/?otel-blogs.sort-by=item.additionalFields.createdDate&amp;otel-blogs.sort-order=desc">AWS Distro for OpenTelemetry</a>、<a href="https://aws.amazon.com/grafana/">Amazon Managed Grafana</a> を 1 つのコマンドで開始し、アプリケーションの監視をすぐに始めることができます。</p>
-<p>Terraform モジュールは、次のワークロードの Amazon EKS クラスタでのオブザーバビリティの有効化を可能にするために構築されています。</p>
+<h1 id="cloudwatch-logs-slgedu">CloudWatch Logs のデータ保護ポリシー (SLG/EDU)<a class="headerlink" href="#cloudwatch-logs-slgedu" title="Permanent link">&para;</a></h1>
+<p>ログデータは一般的には有益ですが、医療保険の相互運用性と説明責任に関する法律 (HIPAA)、一般データ保護規則 (GDPR)、決済カード業界データセキュリティ基準 (PCI-DSS)、連邦リスクおよび認定管理プログラム (FedRAMP) などの厳格な規制を持つ組織にとっては、それらのマスキングが有用です。</p>
+<p>CloudWatch Logs の<a href="https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/logs/cloudwatch-logs-data-protection-policies.html">データ保護ポリシー</a> を使用すると、お客様はログデータ内を通過する機密データをスキャンし、検出された機密データをマスクするデータ保護ポリシーを定義および適用できます。 </p>
+<p>これらのポリシーは、パターンマッチングと機械学習モデルを利用して機密データを検出し、アカウントの CloudWatch ロググループにインジェストされたイベントに表示されるそれらのデータを監査およびマスクするのに役立ちます。</p>
+<p>機密データの選択に使用されるテクニックと基準を<a href="https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/logs/cloudwatch-logs-data-protection-policies.html">マッチングデータ識別子</a>と呼びます。 これらのマネージドデータ識別子を使用することで、CloudWatch Logs は次のものを検出できます。</p>
 <ul>
-<li>Java/JMX</li>
-<li>NGINX  </li>
-<li>Memcached</li>
-<li>HAProxy</li>
+<li>プライベートキーや AWS のシークレットアクセスキーなどの資格情報</li>
+<li>IP アドレスや MAC アドレスなどのデバイス識別子  </li>
+<li>銀行口座番号、クレジットカード番号、クレジットカード確認コードなどの金融情報</li>
+<li>健康保険カード番号 (EHIC) や個人健康番号などの保護された健康情報 (PHI)</li>
+<li>運転免許証、社会保障番号、納税者番号などの個人を特定できる情報 (PII)</li>
 </ul>
-<p>AWS は今後もさらに多くのワークロードの例を追加していきます。</p>
-<p>この記事では、<a href="https://github.com/aws-ia/terraform-aws-eks-blueprints/tree/main/examples/observability">EKS Observability Accelerator</a> を使用して Amazon EKS クラスタを構築し、特定のワークロードを監視するための意見主導型のオブザーバビリティコンポーネントを構成する手順を説明します。ここでは Java/JMX アプリケーションを使用します。</p>
-<h2 id="_1">前提条件<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>このソリューションを進める前に、前提条件を満たしてください。</p>
-<ul>
-<li><a href="https://learn.hashicorp.com/tutorials/terraform/install-cli">Terraform のインストール</a></li>
-<li><a href="https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html">Kubectl のインストール</a></li>
-<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-container-image.html#:~:text=the%20Docker%20CLI.-,Installing%20Docker%20on%20Amazon%20Linux%202,-Create%20a%20Docker">docker のインストール</a></li>
-<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html">AWS Command Line Interface (AWS CLI) バージョン 2</a></li>
-<li><a href="https://stedolan.github.io/jq/download/">jq</a></li>
-<li><a href="https://aws.amazon.com/">AWS アカウント</a></li>
-<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html#:~:text=refreshes%20the%20credentials.-,Set%20and%20view%20configuration%20settings,-There%20are%20several">AWS CLI で資格情報を設定</a></li>
-<li><a href="https://aws.amazon.com/blogs/mt/amazon-managed-grafana-getting-started/">既存の Amazon Managed Grafana ワークスペース</a></li>
-</ul>
-<h2 id="_2">デプロイ手順<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>自分が Kubernetes オペレーターで、組織の Kubernetes 環境のプロビジョニングを担当していることを想像してください。 チームからの要件は多様であり、Kubernetes 環境のプロビジョニングとそれらの構成の取り込みにかなりの時間を費やす必要があります。 新しいリクエストが来るたびに時計がリセットされるので、車輪の再発明が続きます。</p>
-<p>これを簡素化し、作業時間を短縮するために、<a href="https://github.com/aws-ia/terraform-aws-eks-blueprints">EKS Blueprints</a> を考案しました。 EKS Blueprints は、お客様が Amazon EKS を採用し、一般的なワークロードのデプロイを開始するのをより簡単かつ迅速にすることを目的とした Terraform モジュールのコレクションです。 これはオープンソースであり、ワークロードのデプロイと運用に必要な運用ソフトウェアで完全にブートストラップされた完全な Amazon EKS クラスターを構成および管理するために誰でも使用できます。</p>
-<p>EKS Blueprints リポジトリには、Amazon EKS Observability Accelerator モジュールが含まれています。 これを使用して、Amazon EKS クラスターにデプロイされた Java/JMX アプリケーションの可観測性を構成します。</p>
-<h3 id="1">ステップ 1: リポジトリのクローン<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<p>まず、EKS ブループリントが含まれるリポジトリをクローンします。</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git clone https://github.com/aws-ia/terraform-aws-eks-blueprints.git
-</span></code></pre></div>
-<h3 id="2-grafana-api">ステップ 2: Grafana API キーの生成<a class="headerlink" href="#2-grafana-api" title="Permanent link">&para;</a></h3>
-<p>Terraform モジュールをデプロイする前に、Grafana API キーを作成し、ダッシュボードのデプロイにキーを使用するように Terraform 変数ファイルを構成します。 既存の Amazon Managed Grafana ワークスペースを使用し、API キーを構成するにはワークスペースの URL にログインする必要があります。</p>
-<p>キーの作成手順は次のとおりです。</p>
-<ul>
-<li>SAML/SSO 資格情報を使用して、Amazon Managed Grafana ワークスペースにログインします。</li>
-<li>左側のコントロールパネルにカーソルを合わせ、歯車アイコンの下の API キータブを選択します。</li>
-</ul>
-<p><img alt="WelcomeGrafana" src="../../images/eks-observability-accelerator-images/Welcom_Amazon_Grafana.png" /></p>
-<ul>
-<li>[Add API key] をクリックし、名前フィールドに名前を入力して、ロールを [Admin] に設定します。</li>
-<li>[Time to live] フィールドに有効期間を入力します。 サポートされている単位は、s,m,h,d,w,M,y です。</li>
-</ul>
-<p><img alt="GrafanaAPIkey1" src="../../images/eks-observability-accelerator-images/grafanaAPIKey1.png" /></p>
-<ul>
-<li>[Add] をクリックします</li>
-<li>API キーをコピーして安全な場所に保管します。次のステップでこのキーを使用します。</li>
-</ul>
-<p><img alt="GrafanaAPIkey2" src="../../images/eks-observability-accelerator-images/APIKeycreated2.png" /></p>
-<p><img alt="GrafanaAPIkey3" src="../../images/eks-observability-accelerator-images/addAPIKey3.png" /></p>
-<h3 id="3">ステップ 3: 環境の設定<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
-<p>次に、EKS クラスター、AWS OTEL Operator、Amazon Managed Service for Prometheus をプロビジョニングするための Terraform モジュールをデプロイするように環境を設定します。</p>
-<p>Terraform モジュールのデプロイには、以下のステップが含まれます。</p>
-<ul>
-<li><strong>Plan</strong>: Terraform plan は実行計画を作成し、インフラストラクチャの変更をプレビューします。 </li>
-<li><strong>Apply</strong>: Terraform はプランのアクションを実行し、環境を変更します。</li>
-</ul>
-<p>次に、変数ファイルを作成するか、環境変数を設定することによって、環境を設定します。</p>
-<p>「.tfvars」ファイルは、「-var」フラグや環境変数を使用する代替手段です。このファイルは、スクリプトで使用される変数値を定義します。</p>
-<p>このブログ投稿の場合、~/terraform-aws-eks-blueprints/examples/observability/adot-amp-grafana-for-java の下に「dev.tfvars」というファイルを新規作成します。</p>
-<p>dev.tfvars ファイルを、対応する Grafana ワークスペースエンドポイントと Grafana API キーで編集することを確認してください。また、設定をカスタマイズしたい場合は、必要な変数を dev.tfvars ファイルに追加してください。</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cd ~/terraform-aws-eks-blueprints/examples/observability/adot-amp-grafana-for-java
-</span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>vi dev.tfvars
-</span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>grafana_endpoint=”&lt;Your Grafana workspace endpoint&gt;&quot;
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>grafana_api_key=”Your Grafana API Key&gt;&quot;
-</span></code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>機密データは、ロググループにインジェストされると検出され、マスクされます。 データ保護ポリシーを設定すると、その時点より前にロググループにインジェストされたログイベントはマスクされません。</p>
 </div>
-<p>API_KEY – 作成したキーです
-Grafana_Endpoint – Grafana ワークスペースの URL です。</p>
-<p>「https://」を含めることを確認してください。さもないと、Terraform モジュールは失敗します。</p>
-<p></your></p>
-<h3 id="4-terraform">ステップ 4: Terraform モジュールのデプロイ<a class="headerlink" href="#4-terraform" title="Permanent link">&para;</a></h3>
-<p>最初のステップは、terraform init コマンドを使用してワーキングディレクトリを初期化することです。これにより、Terraform 設定ファイルを含むワーキングディレクトリが初期化されます。このコマンドは、新しい Terraform 設定の記述やバージョン管理から既存の設定のクローン後に実行されます。</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>terraform init
+<p>上記で言及したデータタイプのいくつかを詳しく説明し、例を見ていきましょう。</p>
+<h2 id="_1">データ型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">認証情報<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>認証情報は、あなたが誰であるか、リクエストしているリソースへのアクセス権限があるかどうかを確認するために使用される機密データ型です。AWS はこれらの認証情報(プライベートキーやシークレットアクセスキーなど)を使用して、リクエストの認証と承認を行います。</p>
+<p>CloudWatch Logs データ保護ポリシーを使用すると、選択したデータ識別子に一致する機密データがマスクされます(セクションの最後にマスクされた例を示します)。</p>
+<p><img alt="CloudWatch Logs データ保護の認証情報1" src="../../../../images/cwl-dp-credentials.png" /></p>
+<p><img alt="CloudWatch Logs データ保護の認証情報2" src="../../../../images/cwl-dp-cred-sensitive.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>データ分類のベストプラクティスは、組織、法的、コンプライアンス基準を満たす明確に定義されたデータ分類ティアと要件から始まります。</p>
+<p>ベストプラクティスとして、組織のデータガバナンスポリシーに準拠したコンプライアンスを実装するために、データ分類フレームワークに基づいて AWS リソースにタグを付けます。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>ログイベントに機密データが含まれないようにするには、最良の方法は最初にコードで除外することで、必要な情報のみをログに記録することです。</p>
+</div>
+<h3 id="_3">金融情報<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>決済カード業界データセキュリティ基準(PCI DSS)で定義されているように、銀行口座番号、ルーティング番号、デビットカードとクレジットカードの番号、クレジットカードの磁気ストライプデータは、機密金融情報と見なされます。</p>
+<p>機密データを検出するために、CloudWatch Logs はデータ保護ポリシーを設定した後、ロググループが位置する地域に関係なく、指定したデータ識別子をスキャンします。</p>
+<p><img alt="CloudWatch Logs の金融情報用データ保護" src="../../../../images/cwl-dp-fin-info.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/protect-sensitive-log-data-types-financial.html">金融データタイプとデータ識別子の完全なリスト</a>を確認してください</p>
+</div>
+<h3 id="phi">個人識別保健情報(PHI)<a class="headerlink" href="#phi" title="Permanent link">&para;</a></h3>
+<p>PHI には、保険や請求情報、診断データ、医療記録やデータセット、画像や検査結果などの臨床ケアデータを含む、非常に広範囲の個人識別可能な健康および健康関連データが含まれます。</p>
+<p>CloudWatch Logs は、選択したロググループから健康情報をスキャンおよび検出し、そのデータをマスクします。</p>
+<p><img alt="CloudWatch Logs による PHI のデータ保護" src="../../../../images/cwl-dp-phi.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/protect-sensitive-log-data-types-health.html">phi データタイプとデータ識別子の完全なリスト</a> を確認してください</p>
+</div>
+<h3 id="pii">個人を特定できる情報(PII)<a class="headerlink" href="#pii" title="Permanent link">&para;</a></h3>
+<p>PII は、個人を特定するのに使用できる個人データへのテキスト参照です。PII の例には、住所、銀行口座番号、電話番号があります。</p>
+<p><img alt="The CloudWatch Logs Data Protection for PHI" src="../../../../images/cwl-dp-pii.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/protect-sensitive-log-data-types-pii.html">pii データタイプとデータ識別子の完全なリスト</a>を確認してください</p>
+</div>
+<h2 id="_4">マスクされたログ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>データ保護ポリシーを設定したロググループに移動すると、データ保護が <code>On</code> になっており、コンソールには機密データのカウントも表示されます。</p>
+<p><img alt="The CloudWatch Logs Data Protection for PHI" src="../../../../images/cwl-dp-loggroup.png" /></p>
+<p>ここで、<code>View in Log Insights</code> をクリックすると、Log Insights コンソールに移動します。以下のクエリを実行して、ログストリーム内のログイベントを確認すると、すべてのログのリストが表示されます。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>fields @timestamp, @message
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>| sort @timestamp desc
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>| limit 20
 </span></code></pre></div>
-<p>このコマンドは、Terraform での現在のワーキングディレクトリの使用準備を整えるための初期化ステップを実行します。初期化が完了すると、次の通知が表示されるはずです。</p>
-<p><img alt="TerraformModule" src="../../images/eks-observability-accelerator-images/TerraformModules1.png" /></p>
-<p>さらに、terraform validate コマンドを実行して、ディレクトリ内の設定ファイルを評価できます。Validate は、提供された変数や既存の状態に関係なく、構文が有効で内部的に一貫しているかどうかを検証するチェックを実行します。</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>terraform validate
-</span></code></pre></div>
-<p><img alt="TerraformModule" src="../../images/eks-observability-accelerator-images/TerraformModules2.png" /></p>
-<p>次のステップは、terraform plan コマンドを実行して実行計画を作成することです。これにより、Terraform インフラストラクチャの変更をプレビューできます。デフォルトでは、terraform が計画を作成するときに以下を行います。</p>
-<ul>
-<li>既存のリモートオブジェクトの現在の状態を読み取って、Terraform 状態が最新であることを確認します。</li>
-<li>現在の設定と初期状態を比較し、差分を報告します。</li>
-<li>リモートオブジェクトを設定と一致させるために適用する必要があると思われる変更アクションのセットを提案します。</li>
-</ul>
-<p>plan コマンドだけでは提案された変更は実行されません。したがって、このコマンドを使用して、提案された変更が期待したものと一致するかどうかを確認したり、チームと広くレビューするために変更を共有できます。</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>terraform plan -var-file=./dev.tfvars
-</span></code></pre></div>
-<p><img alt="Terraform" src="../../images/eks-observability-accelerator-images/Terraform3.png" /></p>
-<p><img alt="Terraform" src="../../images/eks-observability-accelerator-images/Terraform4.png" /></p>
-<p>最後に、<code>terraform apply</code> コマンドを実行してリソースをプロビジョニングします。これには約 20 分かかります。このコマンドは以下のリソースをデプロイします。</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>terraform apply -var-file=./dev.tfvars -auto-approve
-</span></code></pre></div>
+<p>クエリを展開すると、以下のようにマスクされた結果が表示されます。</p>
+<p><img alt="The CloudWatch Logs Data Protection for PHI" src="../../../../images/cwl-dp-masked.png" /></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>データ保護ポリシーを作成すると、デフォルトで選択したデータ識別子と一致する機密データがマスクされます。 <code>logs:Unmask</code> IAM アクセス許可を持つユーザーのみがマスクされていないデータを表示できます。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/auth-and-access-control-cw.html">AWS IAM とアクセス管理(IAM)</a> を使用して、CloudWatch の機密データへのアクセスを管理および制限します。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>機密データを保護するためには、クラウド環境の定期的なモニタリングと監査が同様に重要です。アプリケーションが大量のデータを生成する場合、これはクリティカルな側面となり、過剰な量のデータを記録することは推奨されません。<a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/logging-monitoring-for-application-owners/logging-best-practices.html">ロギングのベストプラクティス</a> に関するこの AWS 推奨ガイダンスを読んでください。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>CloudWatch Logs のロググループデータは常に暗号化されています。または、<a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/encrypt-log-data-kms.html">AWS Key Management Service</a> を使用してログデータを暗号化することもできます。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>回復力とスケーラビリティのために、CloudWatch アラームを設定し、AWS Amazon EventBridge と AWS Systems Manager を使用して自動修復を行ってください。</p>
+</div>
+<div class="footnote">
+<hr />
 <ol>
-<li><code>aws001-preprod-dev-eks</code> という名前の Amazon EKS クラスターを作成します</li>
-<li><code>amp-ws-aws001-preprod-dev-eks</code> という名前の Amazon Managed Service for Prometheus ワークスペースを作成します</li>
-<li><code>opentelemetry-operator-system, adot-collector-java</code> という名前の Kubernetes 名前空間を作成します</li>
-<li>Java/JMX ワークロードのメトリクスを収集するように構成された設定で、名前空間に AWS ADOT コレクターをデプロイします</li>
-<li>既存の Amazon Managed Grafana ワークスペースで Java/JMX メトリクスを可視化するダッシュボードを構築し、Amazon Managed Service for Prometheus ワークスペースをデータソースとして構成します</li>
+<li id="fn:1">
+<p>機密データの保護を開始するには、AWS ブログの <a href="https://aws.amazon.com/blogs/aws/protect-sensitive-data-with-amazon-cloudwatch-logs/">Protect Sensitive Data with Amazon CloudWatch Logs</a> をご確認ください。&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
 </ol>
-<p>EKS クラスターのプロビジョニング後、Amazon EKS クラスターエンドポイントを kubeconfig に追加し、リソースが正常にプロビジョニングされたことを確認します。</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>aws eks --region $AWS_REGION update-kubeconfig --name aws001-preprod-dev-eks
-</span></code></pre></div>
-<p>次のコマンドを実行して、Amazon Managed Service for Prometheus ワークスペースと ADOT コレクターの作成を確認します。</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>aws amp list-workspaces | jq -r &#39;.workspaces[] | select(.alias==&quot;amp-ws-aws001-preprod-dev-eks&quot;).workspaceId&#39;
-</span></code></pre></div>
-<p>クラスターからすべての Pod を一覧表示</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>kubectl get pods -A
-</span></code></pre></div>
-<p><img alt="Terraform" src="../../images/eks-observability-accelerator-images/Terraform5.png" /></p>
-<p>設定ページに移動し、デフォルトのデータソースを確認することで、Amazon Managed Grafana と Amazon Managed Prometheus 間の接続を確認できるはずです。</p>
-<p><img alt="ConnectionVerify" src="../../images/eks-observability-accelerator-images/GrafanaConnectionVerify1.png" /></p>
-<p><img alt="ConnectionVerify" src="../../images/eks-observability-accelerator-images/GrafanaConnectionVerify2.png" /></p>
-<ul>
-<li><code>amp</code> という名前のデータソースを選択します</li>
-<li>下にスクロールして <code>Save &amp; test</code> を選択します</li>
-</ul>
-<p><img alt="ConnectionVerify" src="../../images/eks-observability-accelerator-images/GrafanaConnectionVerify3.png" /></p>
-<p>次のような成功メッセージが表示されるはずです</p>
-<p><img alt="ConnectionVerify" src="../../images/eks-observability-accelerator-images/GrafanaConnectionVerify4.png" /></p>
-<h3 id="5-javajmx">ステップ 5: サンプル Java/JMX アプリケーションのデプロイ<a class="headerlink" href="#5-javajmx" title="Permanent link">&para;</a></h3>
-<p>サンプルの Java/JMX アプリケーションをデプロイし、JMX メトリクスのスクレイピングを開始します。
-このサンプルアプリケーションは、JVM メモリプール、JVM メモリ使用量、スレッドなどの JMX メトリクスを生成し、Prometheus 形式でエクスポートします。
-最終的に可視化するために、広範囲のメトリクスを取得するロードジェネレータと不良ロードジェネレータをデプロイします。</p>
-<p>EKS Observability アクセラレータは、AWS OTEL オペレータのデプロイメントのメトリクスを収集します。
-ADOT エクスポータは、これらのメトリクスを Amazon Managed Service for Prometheus ワークスペースにインジェストします。</p>
-<p>AWS OpenTelemetry コレクタのリポジトリから例を再利用します。</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a># Switch to home directory
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>cd ~/
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>#Clone the git repository
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>git clone https://github.com/aws-observability/aws-otel-test-framework.git
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>#Setup environment variables
-</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>export AWS_ACCOUNT_ID=`aws sts get-caller-identity --query Account --output text`
-</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
-</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>#Login to registry
-</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
-</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
-</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>#Create ECR Repository
-</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>aws ecr create-repository --repository-name prometheus-sample-tomcat-jmx \
-</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>--image-scanning-configuration scanOnPush=true \
-</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>--region $AWS_REGION
-</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>
-</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>#Build Docker image and push to ECR
-</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>
-</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>cd ~/aws-otel-test-framework/sample-apps/jmx
-</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>
-</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>docker build -t $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/prometheus-sample-tomcat-jmx:latest .
-</span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>
-</span><span id="__span-11-26"><a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/prometheus-sample-tomcat-jmx:latest
-</span><span id="__span-11-27"><a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>
-</span><span id="__span-11-28"><a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>#Deploy the sample application
-</span><span id="__span-11-29"><a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a>
-</span><span id="__span-11-30"><a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>export SAMPLE_TRAFFIC_NAMESPACE=javajmx-sample
-</span><span id="__span-11-31"><a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>
-</span><span id="__span-11-32"><a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>curl https://raw.githubusercontent.com/aws-observability/aws-otel-test-framework/terraform/sample-apps/jmx/examples/prometheus-metrics-sample.yaml &gt; metrics-sample.yaml
-</span><span id="__span-11-33"><a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a>
-</span><span id="__span-11-34"><a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>sed -e &quot;s/{{aws_account_id}}/$AWS_ACCOUNT_ID/g&quot; metrics-sample.yaml -i
-</span><span id="__span-11-35"><a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a>sed -e &quot;s/{{region}}/$AWS_REGION/g&quot; metrics-sample.yaml -i
-</span><span id="__span-11-36"><a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a>sed -e &quot;s/{{namespace}}/$SAMPLE_TRAFFIC_NAMESPACE/g&quot; metrics-sample.yaml -i
-</span><span id="__span-11-37"><a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a>
-</span><span id="__span-11-38"><a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a>kubectl apply -f metrics-sample.yaml
-</span><span id="__span-11-39"><a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a>
-</span><span id="__span-11-40"><a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a>#Verify the application
-</span><span id="__span-11-41"><a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a>
-</span><span id="__span-11-42"><a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a>kubectl get pods -n $SAMPLE_TRAFFIC_NAMESPACE
-</span></code></pre></div>
-<p><img alt="JMXJavaApplication" src="../../images/eks-observability-accelerator-images/JavaJMXImage1.png" /></p>
-<h3 id="6-amazon-managed-grafana-jmx">ステップ 6: Amazon Managed Grafana で JMX メトリクスを視覚化する<a class="headerlink" href="#6-amazon-managed-grafana-jmx" title="Permanent link">&para;</a></h3>
-<p>AWS ADOT オペレータによって収集された JMX メトリクスを視覚化するには、Grafana ワークスペースにログインします。</p>
-<ul>
-<li>[ダッシュボード]を選択し、[管理]を選択します  </li>
-</ul>
-<p><img alt="JMXMetrix1" src="../../images/eks-observability-accelerator-images/JMXMetrics1.png" /></p>
-<ul>
-<li>[Observability]フォルダを選択し、[EKS Accelerator – Observability – Java/JMX]という名前のダッシュボードを選択します</li>
-</ul>
-<p><img alt="JMXMetrix2" src="../../images/eks-observability-accelerator-images/JMXMetrics2.png" /></p>
-<p>Terraform モジュールは、Amazon Managed Service for Prometheus ワークスペースをデフォルトのデータソースとして追加し、メトリクスを視覚化するためのカスタムダッシュボードを作成しました。</p>
-<p><img alt="JMXMetrix3" src="../../images/eks-observability-accelerator-images/JMXMetrics3.png" /></p>
-<p>NGINX、HAProxy、Memcached のサンプルアプリケーションもデプロイできます。</p>
-<h2 id="_3">クリーンアップ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>以下のコマンドを実行して、Terraform モジュールによってプロビジョニングされたリソースを削除します。</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>terraform destroy -var-file=./dev.tfvars -auto-approve
-</span></code></pre></div>
-<h2 id="_4">結論<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>お客様は現在、EKS Observability Acceleratorを利用して、意見atedなEKSクラスタをデプロイし、リソースを手動でデプロイしたり、エージェントを設定したりすることなく、特定のワークロードのためのオブザーバビリティを構成することができます。さらに、このソリューションはAmazon Managed PrometheusワークスペースをAmazon Managed Grafanaと接続し、アラートと通知を設定するための拡張性を提供します。</p>
+</div>
 
 
 
@@ -3397,10 +3951,10 @@ ADOT エクスポータは、これらのメトリクスを Amazon Managed Servi
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs.sticky"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs.sticky"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   </body>

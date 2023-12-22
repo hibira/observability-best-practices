@@ -76,6 +76,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aws-observability.github.io/observability-best-practices/ja/guides/observability-maturity-model/</loc>
+         <lastmod>2023-12-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aws-observability.github.io/observability-best-practices/ja/guides/strategy/</loc>
          <lastmod>2023-12-22</lastmod>
          <changefreq>daily</changefreq>
@@ -152,6 +157,11 @@
     </url>
     <url>
          <loc>https://aws-observability.github.io/observability-best-practices/ja/guides/cost/kubecost/</loc>
+         <lastmod>2023-12-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://aws-observability.github.io/observability-best-practices/ja/guides/cost/cost-visualization/AmazonManagedServiceforPrometheus/</loc>
          <lastmod>2023-12-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -252,6 +262,16 @@
     </url>
     <url>
          <loc>https://aws-observability.github.io/observability-best-practices/ja/guides/partners/databricks/</loc>
+         <lastmod>2023-12-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://aws-observability.github.io/observability-best-practices/ja/guides/serverless/aws-native/lambda-based-observability/</loc>
+         <lastmod>2023-12-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://aws-observability.github.io/observability-best-practices/ja/guides/serverless/oss/lambda-based-observability-adot/</loc>
          <lastmod>2023-12-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -411,11 +431,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aws-observability.github.io/observability-best-practices/ja/recipes/recipes/eks-observability-accelerator/</loc>
-         <lastmod>2023-12-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://aws-observability.github.io/observability-best-practices/ja/recipes/recipes/fargate-eks-metrics-go-adot-ampamg/</loc>
          <lastmod>2023-12-22</lastmod>
          <changefreq>daily</changefreq>
@@ -501,6 +516,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aws-observability.github.io/observability-best-practices/ja/tools/cloudwatch-dashboard/</loc>
+         <lastmod>2023-12-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aws-observability.github.io/observability-best-practices/ja/tools/cloudwatch_agent/</loc>
          <lastmod>2023-12-22</lastmod>
          <changefreq>daily</changefreq>
@@ -531,7 +551,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aws-observability.github.io/observability-best-practices/ja/tools/observability_accelerator/</loc>
+         <lastmod>2023-12-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aws-observability.github.io/observability-best-practices/ja/tools/rum/</loc>
+         <lastmod>2023-12-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://aws-observability.github.io/observability-best-practices/ja/tools/slos/</loc>
          <lastmod>2023-12-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -552,6 +582,11 @@
     </url>
     <url>
          <loc>https://aws-observability.github.io/observability-best-practices/ja/tools/logs/logs-insights-examples/</loc>
+         <lastmod>2023-12-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://aws-observability.github.io/observability-best-practices/ja/tools/logs/dataprotection/data-protection-policies/</loc>
          <lastmod>2023-12-22</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -15,12 +15,12 @@
       
       
       
-      <link rel="icon" href="../../../../images/aws-logo.png">
+      <link rel="icon" href="../../../images/aws-logo.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>Terraform を Infrastructure as Code として使用し、Amazon Managed Service for Prometheus をデプロイおよび Alert Manager を設定する - AWS Observability Best Practices</title>
+        <title>Terraform を使って Amazon Managed Service for Prometheus をデプロイし、アラートマネージャーを設定する - AWS Observability Best Practices</title>
       
     
     
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#terraform-infrastructure-as-code-amazon-managed-service-for-prometheus-alert-manager" class="md-skip">
+        <a href="#terraform-amazon-managed-service-for-prometheus" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -116,7 +116,7 @@
   <nav class="md-header__inner md-grid" aria-label="ヘッダー">
     <a href="../../.." title="AWS Observability Best Practices" class="md-header__button md-logo" aria-label="AWS Observability Best Practices" data-md-component="logo">
       
-  <img src="../../../../images/aws-logo.png" alt="logo">
+  <img src="../../../images/aws-logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -133,7 +133,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Terraform を Infrastructure as Code として使用し、Amazon Managed Service for Prometheus をデプロイおよび Alert Manager を設定する
+              Terraform を使って Amazon Managed Service for Prometheus をデプロイし、アラートマネージャーを設定する
             
           </span>
         </div>
@@ -248,7 +248,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="AWS Observability Best Practices" class="md-nav__button md-logo" aria-label="AWS Observability Best Practices" data-md-component="logo">
       
-  <img src="../../../../images/aws-logo.png" alt="logo">
+  <img src="../../../images/aws-logo.png" alt="logo">
 
     </a>
     AWS Observability Best Practices
@@ -537,6 +537,27 @@
   
   <span class="md-ellipsis">
     Amazon Prometheus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/cost/cost-visualization/AmazonManagedServiceforPrometheus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon Prometheus real-time cost monitoring
   </span>
   
 
@@ -1135,6 +1156,93 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Serverless best practices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Serverless best practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/serverless/aws-native/lambda-based-observability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Native
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/serverless/oss/lambda-based-observability-adot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open Source
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../guides/hybrid-and-multicloud/" class="md-nav__link">
         
@@ -1166,10 +1274,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
         
           
-          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1180,8 +1288,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
             <span class="md-nav__icon md-icon"></span>
             Operational
           </label>
@@ -1203,10 +1311,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_1" >
         
           
-          <label class="md-nav__link" for="__nav_2_9_1" id="__nav_2_9_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_10_1" id="__nav_2_10_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1217,8 +1325,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_9_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10_1">
             <span class="md-nav__icon md-icon"></span>
             ADOT Collector
           </label>
@@ -1353,10 +1461,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_9_5" id="__nav_2_9_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_10_5" id="__nav_2_10_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1367,8 +1475,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_9_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_10_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10_5">
             <span class="md-nav__icon md-icon"></span>
             Alerting
           </label>
@@ -1419,10 +1527,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_6" >
         
           
-          <label class="md-nav__link" for="__nav_2_9_6" id="__nav_2_9_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_10_6" id="__nav_2_10_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1433,8 +1541,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_9_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_10_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10_6">
             <span class="md-nav__icon md-icon"></span>
             GitOps
           </label>
@@ -1452,6 +1560,72 @@
   
   <span class="md-ellipsis">
     Grafana Operator with Amazon Managed Grafana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10_7" id="__nav_2_10_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dashboards
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_10_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10_7">
+            <span class="md-nav__icon md-icon"></span>
+            Dashboards
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/cloudwatch-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CloudWatch Dashboard
   </span>
   
 
@@ -1493,10 +1667,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
         
           
-          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1507,8 +1681,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
             <span class="md-nav__icon md-icon"></span>
             Signal collection
           </label>
@@ -1559,10 +1733,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" >
         
           
-          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1573,8 +1747,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_11">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12">
             <span class="md-nav__icon md-icon"></span>
             Partners
           </label>
@@ -1601,9 +1775,312 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_12_2" id="__nav_2_12_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Databases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_12_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12_2">
+            <span class="md-nav__icon md-icon"></span>
+            Databases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/databases/rds-and-aurora/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aurora and RDS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_12_3" id="__nav_2_12_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cost
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_12_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cost
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/cost/kubecost/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Kubecost
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_12_3_2" id="__nav_2_12_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visualizing costs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_12_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Visualizing costs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/cost/cost-visualization/cost/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Observability services and Cost
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/cost/cost-visualization/amazon-cloudwatch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon CloudWatch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/cost/cost-visualization/amazon-grafana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon Grafana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/cost/cost-visualization/amazon-prometheus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon Prometheus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/cost/cost-visualization/aws-xray/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS X-Ray
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/observability-maturity-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Observability Maturity Model
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1809,6 +2286,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../tools/observability_accelerator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Observability Accelerator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../tools/cloudwatch_agent/" class="md-nav__link">
         
   
@@ -1902,10 +2400,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
         
           
-          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1916,8 +2414,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
             <span class="md-nav__icon md-icon"></span>
             Logs
           </label>
@@ -1960,6 +2458,72 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6_3" id="__nav_4_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Protection
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Data Protection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/logs/dataprotection/data-protection-policies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CloudWatch Logs Data Protection Policies for SLG/EDU
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2027,6 +2591,27 @@
   
   <span class="md-ellipsis">
     Synthetic Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/slos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Service Level Objectives (SLOs)
   </span>
   
 
@@ -3095,11 +3680,11 @@
   
 
 
-<h1 id="terraform-infrastructure-as-code-amazon-managed-service-for-prometheus-alert-manager">Terraform を Infrastructure as Code として使用し、Amazon Managed Service for Prometheus をデプロイおよび Alert Manager を設定する<a class="headerlink" href="#terraform-infrastructure-as-code-amazon-managed-service-for-prometheus-alert-manager" title="Permanent link">&para;</a></h1>
-<p>このレシピでは、<a href="https://www.terraform.io/">Terraform</a> を使用して <a href="https://aws.amazon.com/prometheus/">Amazon Managed Service for Prometheus</a> をプロビジョニングし、ルール管理とアラートマネージャーを設定して、特定の条件が満たされた場合に <a href="https://docs.aws.amazon.com/sns/">SNS</a> トピックに通知を送信する方法を示します。</p>
+<h1 id="terraform-amazon-managed-service-for-prometheus">Terraform を使って Amazon Managed Service for Prometheus をデプロイし、アラートマネージャーを設定する<a class="headerlink" href="#terraform-amazon-managed-service-for-prometheus" title="Permanent link">&para;</a></h1>
+<p>このレシピでは、<a href="https://www.terraform.io/">Terraform</a> を使用して <a href="https://aws.amazon.com/prometheus/">Amazon Managed Service for Prometheus</a> をプロビジョニングし、特定の条件が満たされた場合に <a href="https://docs.aws.amazon.com/sns/">SNS</a> トピックに通知を送信するために、ルール管理とアラートマネージャーを設定する方法を示します。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>このガイドの完了には約 30 分かかります。</p>
+<p>このガイドを完了するのに約 30 分かかります。</p>
 </div>
 <h2 id="_1">前提条件<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>セットアップを完了するには、次のものが必要です。</p>
@@ -3115,14 +3700,14 @@
 <li><a href="https://docs.aws.amazon.com/ja_jp/sns/latest/dg/sns-create-topic.html">SNS トピック</a></li>
 <li><a href="https://github.com/okigan/awscurl">awscurl</a></li>
 </ul>
-<p>このレシピでは、サンプルアプリケーションを使用して、ADOT を使用したメトリック スクレイピングと Amazon Managed Service for Prometheus ワークスペースへのリモートライトをデモンストレーションします。サンプルアプリを <a href="https://github.com/aws-observability/aws-otel-community">aws-otel-community</a> のリポジトリからフォークしてクローンしてください。</p>
-<p>この Prometheus サンプルアプリは、すべての 4 つの Prometheus メトリックタイプ(カウンター、ゲージ、ヒストグラム、サマリー)を生成し、/metrics エンドポイントで公開します。</p>
+<p>このレシピでは、サンプルアプリケーションを使用して、ADOT を使用したメトリクス スクレイピングと Amazon Managed Service for Prometheus ワークスペースへのリモートライトをデモンストレーションします。サンプルアプリを <a href="https://github.com/aws-observability/aws-otel-community">aws-otel-community</a> のリポジトリからフォークしてクローンしてください。</p>
+<p>この Prometheus サンプルアプリは、すべての 4 つの Prometheus メトリクスタイプ(カウンター、ゲージ、ヒストグラム、サマリー)を生成し、/metrics エンドポイントで公開します。</p>
 <p>ヘルスチェックエンドポイントも / に存在します。</p>
 <p>以下は、構成のためのオプションのコマンドラインフラグのリストです。</p>
 <p>listen_address: (デフォルト = 0.0.0.0:8080) サンプルアプリが公開されるアドレスとポートを定義します。これは主にテストフレームワークの要件に準拠するためです。</p>
-<p>metric_count: (デフォルト=1) 生成する各タイプのメトリックの量。メトリックタイプごとに常に同じ量のメトリックが生成されます。</p>
-<p>label_count: (デフォルト=1) メトリックごとに生成するラベルの量。</p>
-<p>datapoint_count: (デフォルト=1) メトリックごとに生成するデータポイントの数。</p>
+<p>metric_count: (デフォルト=1) 生成する各タイプのメトリクスの量。メトリクスタイプごとに常に同じ量のメトリクスが生成されます。</p>
+<p>label_count: (デフォルト=1) 生成するメトリクスごとのラベルの量。</p>
+<p>datapoint_count: (デフォルト=1) 生成するメトリクスごとのデータポイントの数。</p>
 <h3 id="aws-distro-for-opentelemetry">AWS Distro for OpenTelemetry を使用したメトリクス収集の有効化<a class="headerlink" href="#aws-distro-for-opentelemetry" title="Permanent link">&para;</a></h3>
 <ol>
 <li>aws-otel-community のリポジトリからサンプルアプリをフォークしてクローンします。
@@ -3153,8 +3738,8 @@ Kubernetes 構成のサービスアカウントセクションで、<code>YOUR_A
 </span></code></pre></div></p>
 <p></your_region></your_region></p>
 <h3 id="terraform">Terraform でワークスペースを設定する<a class="headerlink" href="#terraform" title="Permanent link">&para;</a></h3>
-<p>ここで、Amazon Managed Service for Prometheus ワークスペースをプロビジョニングし、特定の条件(<code>expr</code>で定義)が指定された期間(<code>for</code>)真である場合に、Alert Manager が通知を送信するようにアラートルールを定義します。Terraform 言語のコードは、.tf 拡張子のプレーンテキストファイルに保存されます。.tf.json ファイル拡張子で名前が付けられている JSON ベースの言語バリアントもあります。</p>
-<p>ここで、<a href="main.tf">main.tf</a> を使用して、Terraform を使用してリソースをデプロイします。Terraform コマンドを実行する前に、<code>region</code> と <code>sns_topic</code> 変数をエクスポートします。</p>
+<p>ここで、Amazon Managed Service for Prometheus ワークスペースをプロビジョニングし、特定の条件 (<code>expr</code> で定義) が指定された期間 (<code>for</code>) 満たされた場合に、Alert Manager が通知を送信するようにアラートルールを定義します。Terraform 言語のコードは、.tf 拡張子のプレーンテキストファイルに保存されます。.tf.json ファイル拡張子で名前が付けられている JSON ベースのバリアントもあります。</p>
+<p>ここで、<a href="main.tf">main.tf</a> を使用して、Terraform でリソースをデプロイします。Terraform コマンドを実行する前に、<code>region</code> と <code>sns_topic</code> 変数をエクスポートします。</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>export TF_VAR_region=&lt;your region&gt;
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>export TF_VAR_sns_topic=&lt;ARN of the SNS topic used by the SNS receiver&gt;
 </span></code></pre></div>
@@ -3164,15 +3749,15 @@ Kubernetes 構成のサービスアカウントセクションで、<code>YOUR_A
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>terraform apply
 </span></code></pre></div>
 <p>上記の手順が完了したら、awscurl を使用してエンドポイントをクエリすることで、セットアップをエンドツーエンドで検証します。<code>WORKSPACE_ID</code> 変数が適切な Amazon Managed Service for Prometheus ワークスペース ID に置き換えられていることを確認してください。</p>
-<p>次のコマンドを実行すると、「metric:recording_rule」メトリクスを探し、メトリクスを正常に見つけた場合は、記録ルールの作成に成功したことを意味します:</p>
+<p>次のコマンドを実行すると、「metric:recording_rule」メトリクスを探し、メトリクスを正常に見つけた場合は recording rule の作成に成功したことを意味します:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>awscurl https://aps-workspaces.us-east-1.amazonaws.com/workspaces/$WORKSPACE_ID/api/v1/rules  --service=&quot;aps&quot;
 </span></code></pre></div>
 <p>サンプル出力:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>&quot;status&quot;:&quot;success&quot;,&quot;data&quot;:{&quot;groups&quot;:[{&quot;name&quot;:&quot;alert-test&quot;,&quot;file&quot;:&quot;rules&quot;,&quot;rules&quot;:[{&quot;state&quot;:&quot;firing&quot;,&quot;name&quot;:&quot;metric:alerting_rule&quot;,&quot;query&quot;:&quot;rate(adot_test_counter0[5m]) \u003e 5&quot;,&quot;duration&quot;:0,&quot;labels&quot;:{},&quot;annotations&quot;:{},&quot;alerts&quot;:[{&quot;labels&quot;:{&quot;alertname&quot;:&quot;metric:alerting_rule&quot;},&quot;annotations&quot;:{},&quot;state&quot;:&quot;firing&quot;,&quot;activeAt&quot;:&quot;2021-09-16T13:20:35.9664022Z&quot;,&quot;value&quot;:&quot;6.96890019778219e+01&quot;}],&quot;health&quot;:&quot;ok&quot;,&quot;lastError&quot;:&quot;&quot;,&quot;type&quot;:&quot;alerting&quot;,&quot;lastEvaluation&quot;:&quot;2021-09-16T18:41:35.967122005Z&quot;,&quot;evaluationTime&quot;:0.018121408}],&quot;interval&quot;:60,&quot;lastEvaluation&quot;:&quot;2021-09-16T18:41:35.967104769Z&quot;,&quot;evaluationTime&quot;:0.018142997},{&quot;name&quot;:&quot;test&quot;,&quot;file&quot;:&quot;rules&quot;,&quot;rules&quot;:[{&quot;name&quot;:&quot;metric:recording_rule&quot;,&quot;query&quot;:&quot;rate(adot_test_counter0[5m])&quot;,&quot;labels&quot;:{},&quot;health&quot;:&quot;ok&quot;,&quot;lastError&quot;:&quot;&quot;,&quot;type&quot;:&quot;recording&quot;,&quot;lastEvaluation&quot;:&quot;2021-09-16T18:40:44.650001548Z&quot;,&quot;evaluationTime&quot;:0.018381387}],&quot;interval&quot;:60,&quot;lastEvaluation&quot;:&quot;2021-09-16T18:40:44.649986468Z&quot;,&quot;evaluationTime&quot;:0.018400463}]},&quot;errorType&quot;:&quot;&quot;,&quot;error&quot;:&quot;&quot;}
 </span></code></pre></div></p>
-<p>さらに、アラートがトリガーされ、SNS Receiver 経由で SNS に送信されたことを確認するために、alertmanager エンドポイントをクエリできます。
+<p>さらに、アラートがトリガーされ、SNS Receiver 経由で SNS に送信されたことを確認するために、alertmanager エンドポイントをクエリできます。</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>awscurl https://aps-workspaces.us-east-1.amazonaws.com/workspaces/$WORKSPACE_ID/alertmanager/api/v2/alerts --service=&quot;aps&quot; -H &quot;Content-Type: application/json&quot;
-</span></code></pre></div></p>
+</span></code></pre></div>
 <p>サンプル出力:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>[{&quot;annotations&quot;:{},&quot;endsAt&quot;:&quot;2021-09-16T18:48:35.966Z&quot;,&quot;fingerprint&quot;:&quot;114212a24ca97549&quot;,&quot;receivers&quot;:[{&quot;name&quot;:&quot;default&quot;}],&quot;startsAt&quot;:&quot;2021-09-16T13:20:35.966Z&quot;,&quot;status&quot;:{&quot;inhibitedBy&quot;:[],&quot;silencedBy&quot;:[],&quot;state&quot;:&quot;active&quot;},&quot;updatedAt&quot;:&quot;2021-09-16T18:44:35.984Z&quot;,&quot;generatorURL&quot;:&quot;/graph?g0.expr=sum%28rate%28envoy_http_downstream_rq_time_bucket%5B1m%5D%29%29+%3E+5\u0026g0.tab=1&quot;,&quot;labels&quot;:{&quot;alertname&quot;:&quot;metric:alerting_rule&quot;}}]
 </span></code></pre></div>
