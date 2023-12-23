@@ -20,7 +20,7 @@
     
     
       
-        <title>Terraform を使って Amazon Managed Service for Prometheus をデプロイし、アラートマネージャーを設定する - AWS Observability Best Practices</title>
+        <title>Infrastructure as Code としての Terraform を使用した Amazon Managed Service for Prometheus のデプロイと Alert Manager の設定 - AWS Observability Best Practices</title>
       
     
     
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#terraform-amazon-managed-service-for-prometheus" class="md-skip">
+        <a href="#infrastructure-as-code-terraform-amazon-managed-service-for-prometheus-alert-manager" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -133,7 +133,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Terraform を使って Amazon Managed Service for Prometheus をデプロイし、アラートマネージャーを設定する
+              Infrastructure as Code としての Terraform を使用した Amazon Managed Service for Prometheus のデプロイと Alert Manager の設定
             
           </span>
         </div>
@@ -1775,288 +1775,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_12_2" id="__nav_2_12_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Databases
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_12_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_12_2">
-            <span class="md-nav__icon md-icon"></span>
-            Databases
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../guides/databases/rds-and-aurora/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Aurora and RDS
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_12_3" id="__nav_2_12_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Cost
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_12_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_12_3">
-            <span class="md-nav__icon md-icon"></span>
-            Cost
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../guides/cost/kubecost/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Using Kubecost
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12_3_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_12_3_2" id="__nav_2_12_3_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Visualizing costs
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_12_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_12_3_2">
-            <span class="md-nav__icon md-icon"></span>
-            Visualizing costs
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../guides/cost/cost-visualization/cost/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    AWS Observability services and Cost
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../guides/cost/cost-visualization/amazon-cloudwatch/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Amazon CloudWatch
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../guides/cost/cost-visualization/amazon-grafana/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Amazon Grafana
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../guides/cost/cost-visualization/amazon-prometheus/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Amazon Prometheus
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../guides/cost/cost-visualization/aws-xray/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    AWS X-Ray
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -3680,11 +3398,11 @@
   
 
 
-<h1 id="terraform-amazon-managed-service-for-prometheus">Terraform を使って Amazon Managed Service for Prometheus をデプロイし、アラートマネージャーを設定する<a class="headerlink" href="#terraform-amazon-managed-service-for-prometheus" title="Permanent link">&para;</a></h1>
-<p>このレシピでは、<a href="https://www.terraform.io/">Terraform</a> を使用して <a href="https://aws.amazon.com/prometheus/">Amazon Managed Service for Prometheus</a> をプロビジョニングし、特定の条件が満たされた場合に <a href="https://docs.aws.amazon.com/sns/">SNS</a> トピックに通知を送信するために、ルール管理とアラートマネージャーを設定する方法を示します。</p>
+<h1 id="infrastructure-as-code-terraform-amazon-managed-service-for-prometheus-alert-manager">Infrastructure as Code としての Terraform を使用した Amazon Managed Service for Prometheus のデプロイと Alert Manager の設定<a class="headerlink" href="#infrastructure-as-code-terraform-amazon-managed-service-for-prometheus-alert-manager" title="Permanent link">&para;</a></h1>
+<p>このレシピでは、<a href="https://www.terraform.io/">Terraform</a> を使用して <a href="https://aws.amazon.com/prometheus/">Amazon Managed Service for Prometheus</a> をプロビジョニングし、ルール管理とアラートマネージャーを設定して、特定の条件が満たされた場合に <a href="https://docs.aws.amazon.com/sns/">SNS</a> トピックに通知を送信する方法を示します。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>このガイドを完了するのに約 30 分かかります。</p>
+<p>このガイドの完了には約 30 分かかります。</p>
 </div>
 <h2 id="_1">前提条件<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>セットアップを完了するには、次のものが必要です。</p>
@@ -3700,18 +3418,18 @@
 <li><a href="https://docs.aws.amazon.com/ja_jp/sns/latest/dg/sns-create-topic.html">SNS トピック</a></li>
 <li><a href="https://github.com/okigan/awscurl">awscurl</a></li>
 </ul>
-<p>このレシピでは、サンプルアプリケーションを使用して、ADOT を使用したメトリクス スクレイピングと Amazon Managed Service for Prometheus ワークスペースへのリモートライトをデモンストレーションします。サンプルアプリを <a href="https://github.com/aws-observability/aws-otel-community">aws-otel-community</a> のリポジトリからフォークしてクローンしてください。</p>
-<p>この Prometheus サンプルアプリは、すべての 4 つの Prometheus メトリクスタイプ(カウンター、ゲージ、ヒストグラム、サマリー)を生成し、/metrics エンドポイントで公開します。</p>
+<p>このレシピでは、サンプルアプリケーションを使用して、ADOT を使用したメトリック スクレイピングと Amazon Managed Service for Prometheus ワークスペースへのリモートライトをデモンストレートします。サンプルアプリを <a href="https://github.com/aws-observability/aws-otel-community">aws-otel-community</a> リポジトリからフォークしてクローンしてください。</p>
+<p>この Prometheus サンプルアプリは、すべての 4 つの Prometheus メトリックタイプ(カウンター、ゲージ、ヒストグラム、サマリー)を生成し、/metrics エンドポイントで公開します。</p>
 <p>ヘルスチェックエンドポイントも / に存在します。</p>
-<p>以下は、構成のためのオプションのコマンドラインフラグのリストです。</p>
+<p>以下は構成のためのオプションのコマンドラインフラグのリストです。</p>
 <p>listen_address: (デフォルト = 0.0.0.0:8080) サンプルアプリが公開されるアドレスとポートを定義します。これは主にテストフレームワークの要件に準拠するためです。</p>
-<p>metric_count: (デフォルト=1) 生成する各タイプのメトリクスの量。メトリクスタイプごとに常に同じ量のメトリクスが生成されます。</p>
-<p>label_count: (デフォルト=1) 生成するメトリクスごとのラベルの量。</p>
-<p>datapoint_count: (デフォルト=1) 生成するメトリクスごとのデータポイントの数。</p>
+<p>metric_count: (デフォルト=1) 生成する各タイプのメトリックの量。メトリックタイプごとに常に同じ量のメトリックが生成されます。</p>
+<p>label_count: (デフォルト=1) メトリックごとに生成するラベルの量。</p>
+<p>datapoint_count: (デフォルト=1) メトリックごとに生成するデータポイントの数。</p>
 <h3 id="aws-distro-for-opentelemetry">AWS Distro for OpenTelemetry を使用したメトリクス収集の有効化<a class="headerlink" href="#aws-distro-for-opentelemetry" title="Permanent link">&para;</a></h3>
 <ol>
-<li>aws-otel-community のリポジトリからサンプルアプリをフォークしてクローンします。
-その後、次のコマンドを実行します。</li>
+<li>aws-otel-community リポジトリからサンプルアプリをフォークしてクローンします。
+次に、以下のコマンドを実行します。</li>
 </ol>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cd ./sample-apps/prometheus
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docker build . -t prometheus-sample-app:latest
@@ -3722,24 +3440,24 @@
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    --image-scanning-configuration scanOnPush=true \
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    --region &lt;YOUR_REGION&gt;
 </span></code></pre></div>
-3. クラスターにサンプルアプリをデプロイするには、この Kubernetes の構成をコピーして適用します。prometheus-sample-app.yaml ファイルの <code>PUBLIC_SAMPLE_APP_IMAGE</code> を置き換えて、プッシュしたイメージにイメージを変更します。</p>
+3. この Kubernetes の構成をコピーして適用することで、サンプルアプリをクラスタにデプロイします。 <code>PUBLIC_SAMPLE_APP_IMAGE</code> をプッシュしたイメージに置き換えることで、prometheus-sample-app.yaml ファイルのイメージを変更します。</p>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>curl https://raw.githubusercontent.com/aws-observability/aws-otel-collector/main/examples/eks/aws-prometheus/prometheus-sample-app.yaml -o prometheus-sample-app.yaml
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>kubectl apply -f prometheus-sample-app.yaml
 </span></code></pre></div>
-4. ADOT Collector のデフォルトインスタンスを起動します。まず、ADOT Collector の Kubernetes 構成をプルする次のコマンドを入力します。</p>
+4. ADOT Collector のデフォルトインスタンスを起動します。そのために、まず次のコマンドを入力して ADOT Collector の Kubernetes 構成をプルします。</p>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>curl https://raw.githubusercontent.com/aws-observability/aws-otel-collector/main/examples/eks/aws-prometheus/prometheus-daemonset.yaml -o prometheus-daemonset.yaml
 </span></code></pre></div>
-次に、テンプレートファイルを編集し、Amazon Managed Service for Prometheus ワークスペースの remote_write エンドポイントを <code>YOUR_ENDPOINT</code> で、リージョンを <code>YOUR_REGION</code> で置き換えます。
-ワークスペースの詳細を表示しているときに Amazon Managed Service for Prometheus コンソールに表示されている remote_write エンドポイントを使用します。
-Kubernetes 構成のサービスアカウントセクションで、<code>YOUR_ACCOUNT_ID</code> を AWS アカウント ID に変更する必要があります。</p>
-<p>このレシピでは、ADOT Collector 構成はアノテーション <code>(scrape=true)</code> を使用して、どのターゲットエンドポイントをスクレイプするかを指示します。これにより、ADOT Collector はクラスター内の kube-system エンドポイントとサンプルアプリエンドポイントを区別できます。別のサンプルアプリをスクレイプする場合は、これを再ラベル構成から削除できます。
+次に、テンプレートファイルを編集し、Amazon Managed Service for Prometheus ワークスペースの remote_write エンドポイントを <code>YOUR_ENDPOINT</code> に、リージョンを <code>YOUR_REGION</code> に置き換えます。
+remote_write エンドポイントは、Amazon Managed Service for Prometheus コンソールのワークスペースの詳細を表示したときに表示されます。
+Kubernetes 構成のサービスアカウントセクションで、<code>YOUR_ACCOUNT_ID</code> を自分の AWS アカウント ID に変更する必要があります。</p>
+<p>このレシピでは、ADOT Collector 構成はアノテーション <code>(scrape = true)</code> を使用して、どのターゲットエンドポイントをスクレイプするかを伝えています。これにより、ADOT Collector はクラスタ内のサンプルアプリエンドポイントを kube-system エンドポイントから区別できます。別のサンプルアプリをスクレイプしたい場合は、この re-label 構成から削除できます。
 5. 次のコマンドを入力して、ADOT コレクターをデプロイします。
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>kubectl apply -f eks-prometheus-daemonset.yaml
 </span></code></pre></div></p>
 <p></your_region></your_region></p>
 <h3 id="terraform">Terraform でワークスペースを設定する<a class="headerlink" href="#terraform" title="Permanent link">&para;</a></h3>
-<p>ここで、Amazon Managed Service for Prometheus ワークスペースをプロビジョニングし、特定の条件 (<code>expr</code> で定義) が指定された期間 (<code>for</code>) 満たされた場合に、Alert Manager が通知を送信するようにアラートルールを定義します。Terraform 言語のコードは、.tf 拡張子のプレーンテキストファイルに保存されます。.tf.json ファイル拡張子で名前が付けられている JSON ベースのバリアントもあります。</p>
-<p>ここで、<a href="main.tf">main.tf</a> を使用して、Terraform でリソースをデプロイします。Terraform コマンドを実行する前に、<code>region</code> と <code>sns_topic</code> 変数をエクスポートします。</p>
+<p>ここで、Amazon Managed Service for Prometheus ワークスペースをプロビジョニングし、特定の条件 (<code>expr</code>で定義) が特定の期間 (<code>for</code>) 真である場合に、アラートマネージャーが通知を送信するようにアラートルールを定義します。Terraform 言語のコードは、.tf 拡張子のプレーンテキストファイルに保存されます。言語には .tf.json ファイル拡張子を持つ JSON ベースのバリアントもあります。</p>
+<p>ここでは、<a href="main.tf">main.tf</a> を使用して、Terraform でリソースをデプロイします。Terraform コマンドを実行する前に、<code>region</code> と <code>sns_topic</code> 変数をエクスポートします。</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>export TF_VAR_region=&lt;your region&gt;
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>export TF_VAR_sns_topic=&lt;ARN of the SNS topic used by the SNS receiver&gt;
 </span></code></pre></div>
@@ -3748,23 +3466,23 @@ Kubernetes 構成のサービスアカウントセクションで、<code>YOUR_A
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>terraform plan
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>terraform apply
 </span></code></pre></div>
-<p>上記の手順が完了したら、awscurl を使用してエンドポイントをクエリすることで、セットアップをエンドツーエンドで検証します。<code>WORKSPACE_ID</code> 変数が適切な Amazon Managed Service for Prometheus ワークスペース ID に置き換えられていることを確認してください。</p>
-<p>次のコマンドを実行すると、「metric:recording_rule」メトリクスを探し、メトリクスを正常に見つけた場合は recording rule の作成に成功したことを意味します:</p>
+<p>上記の手順が完了したら、awscurl を使用してエンドツーエンドの設定を検証し、エンドポイントをクエリします。適切な Amazon Managed Service for Prometheus ワークスペース ID に <code>WORKSPACE_ID</code> 変数を置き換えてください。</p>
+<p>次のコマンドを実行すると、「metric:recording_rule」メトリックが表示されます。このメトリックが見つかった場合、記録ルールの作成に成功したことになります:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>awscurl https://aps-workspaces.us-east-1.amazonaws.com/workspaces/$WORKSPACE_ID/api/v1/rules  --service=&quot;aps&quot;
 </span></code></pre></div>
-<p>サンプル出力:
+<p>出力サンプル:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>&quot;status&quot;:&quot;success&quot;,&quot;data&quot;:{&quot;groups&quot;:[{&quot;name&quot;:&quot;alert-test&quot;,&quot;file&quot;:&quot;rules&quot;,&quot;rules&quot;:[{&quot;state&quot;:&quot;firing&quot;,&quot;name&quot;:&quot;metric:alerting_rule&quot;,&quot;query&quot;:&quot;rate(adot_test_counter0[5m]) \u003e 5&quot;,&quot;duration&quot;:0,&quot;labels&quot;:{},&quot;annotations&quot;:{},&quot;alerts&quot;:[{&quot;labels&quot;:{&quot;alertname&quot;:&quot;metric:alerting_rule&quot;},&quot;annotations&quot;:{},&quot;state&quot;:&quot;firing&quot;,&quot;activeAt&quot;:&quot;2021-09-16T13:20:35.9664022Z&quot;,&quot;value&quot;:&quot;6.96890019778219e+01&quot;}],&quot;health&quot;:&quot;ok&quot;,&quot;lastError&quot;:&quot;&quot;,&quot;type&quot;:&quot;alerting&quot;,&quot;lastEvaluation&quot;:&quot;2021-09-16T18:41:35.967122005Z&quot;,&quot;evaluationTime&quot;:0.018121408}],&quot;interval&quot;:60,&quot;lastEvaluation&quot;:&quot;2021-09-16T18:41:35.967104769Z&quot;,&quot;evaluationTime&quot;:0.018142997},{&quot;name&quot;:&quot;test&quot;,&quot;file&quot;:&quot;rules&quot;,&quot;rules&quot;:[{&quot;name&quot;:&quot;metric:recording_rule&quot;,&quot;query&quot;:&quot;rate(adot_test_counter0[5m])&quot;,&quot;labels&quot;:{},&quot;health&quot;:&quot;ok&quot;,&quot;lastError&quot;:&quot;&quot;,&quot;type&quot;:&quot;recording&quot;,&quot;lastEvaluation&quot;:&quot;2021-09-16T18:40:44.650001548Z&quot;,&quot;evaluationTime&quot;:0.018381387}],&quot;interval&quot;:60,&quot;lastEvaluation&quot;:&quot;2021-09-16T18:40:44.649986468Z&quot;,&quot;evaluationTime&quot;:0.018400463}]},&quot;errorType&quot;:&quot;&quot;,&quot;error&quot;:&quot;&quot;}
 </span></code></pre></div></p>
-<p>さらに、アラートがトリガーされ、SNS Receiver 経由で SNS に送信されたことを確認するために、alertmanager エンドポイントをクエリできます。</p>
+<p>さらに、alertmanager エンドポイントをクエリして同じことを確認できます。
 <div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>awscurl https://aps-workspaces.us-east-1.amazonaws.com/workspaces/$WORKSPACE_ID/alertmanager/api/v2/alerts --service=&quot;aps&quot; -H &quot;Content-Type: application/json&quot;
-</span></code></pre></div>
-<p>サンプル出力:
+</span></code></pre></div></p>
+<p>出力サンプル:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>[{&quot;annotations&quot;:{},&quot;endsAt&quot;:&quot;2021-09-16T18:48:35.966Z&quot;,&quot;fingerprint&quot;:&quot;114212a24ca97549&quot;,&quot;receivers&quot;:[{&quot;name&quot;:&quot;default&quot;}],&quot;startsAt&quot;:&quot;2021-09-16T13:20:35.966Z&quot;,&quot;status&quot;:{&quot;inhibitedBy&quot;:[],&quot;silencedBy&quot;:[],&quot;state&quot;:&quot;active&quot;},&quot;updatedAt&quot;:&quot;2021-09-16T18:44:35.984Z&quot;,&quot;generatorURL&quot;:&quot;/graph?g0.expr=sum%28rate%28envoy_http_downstream_rq_time_bucket%5B1m%5D%29%29+%3E+5\u0026g0.tab=1&quot;,&quot;labels&quot;:{&quot;alertname&quot;:&quot;metric:alerting_rule&quot;}}]
-</span></code></pre></div>
-これは、アラートがトリガーされ、SNS Receiver を介して SNS に送信されたことを確認しています。</p>
-<p></sns></your></p>
+</span></code></pre></div></p>
+<p>これにより、アラートがトリガーされ、SNS Receiver 経由で SNS に送信されたことが確認されます。</p>
+<p></sns></p>
 <h2 id="_2">クリーンアップ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>以下のコマンドを実行して、Amazon Managed Service for Prometheus ワークスペースを終了してください。作成された EKS クラスターも削除するようにしてください。</p>
+<p>以下のコマンドを実行して、Amazon Managed Service for Prometheus ワークスペースを終了してください。作成した EKS クラスターも削除するようにしてください。</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>terraform destroy
 </span></code></pre></div>
 

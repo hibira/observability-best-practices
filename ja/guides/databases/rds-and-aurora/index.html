@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://aws-observability.github.io/observability-best-practices/ja/guides/databases/rds-and-aurora/">
       
       
-        <link rel="prev" href="../../partners/databricks/">
+        <link rel="prev" href="../../cost/cost-visualization/aws-xray/">
       
       
-        <link rel="next" href="../../cost/kubecost/">
+        <link rel="next" href="../../ec2/ec2-monitoring/">
       
       
       <link rel="icon" href="../../../images/aws-logo.png">
@@ -614,19 +614,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
         
           
           <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
@@ -640,7 +642,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Databases
@@ -651,9 +653,11 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
+  
+    <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
@@ -773,28 +777,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#performance-insights" class="md-nav__link">
     <span class="md-ellipsis">
-      パフォーマンスインサイトとオペレーティングシステムメトリクス
+      Performance Insights とオペレーティングシステムメトリクス
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="パフォーマンスインサイトとオペレーティングシステムメトリクス">
+    <nav class="md-nav" aria-label="Performance Insights とオペレーティングシステムメトリクス">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      強化モニタリング
+      拡張モニタリング
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#performance-insights_1" class="md-nav__link">
     <span class="md-ellipsis">
-      パフォーマンスインサイト
+      Performance Insights
     </span>
   </a>
   
@@ -806,7 +810,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       オープンソースのオブザーバビリティツール
     </span>
@@ -854,7 +858,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       監査とガバナンス
     </span>
@@ -878,7 +882,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       詳細情報の参照
     </span>
@@ -1954,21 +1958,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" >
         
           
           <label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="0">
@@ -1982,7 +1984,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_12">
             <span class="md-nav__icon md-icon"></span>
             Partners
@@ -2005,519 +2007,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2_12_2" id="__nav_2_12_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Databases
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_12_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_12_2">
-            <span class="md-nav__icon md-icon"></span>
-            Databases
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Aurora and RDS
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Aurora and RDS
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      パフォーマンスガイドライン
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      モニタリングオプション
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="モニタリングオプション">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#amazon-cloudwatch" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amazon CloudWatch メトリクス
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Amazon CloudWatch メトリクス">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cloudwatch-logs-insights" class="md-nav__link">
-    <span class="md-ellipsis">
-      CloudWatch Logs Insights
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cloudwatch" class="md-nav__link">
-    <span class="md-ellipsis">
-      CloudWatch アラーム
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      データベース監査ログ
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      データベースの遅いクエリとエラーログ
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      パフォーマンスインサイトとオペレーティングシステムメトリクス
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="パフォーマンスインサイトとオペレーティングシステムメトリクス">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      強化モニタリング
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      パフォーマンスインサイト
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      オープンソースのオブザーバビリティツール
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="オープンソースのオブザーバビリティツール">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#amazon-managed-grafana" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amazon Managed Grafana
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aiops-" class="md-nav__link">
-    <span class="md-ellipsis">
-      AIOps - マシンラーニングベースのパフォーマンスボトルネック検出
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="AIOps - マシンラーニングベースのパフォーマンスボトルネック検出">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#amazon-devops-guru-for-rds" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amazon DevOps Guru for RDS
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      監査とガバナンス
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="監査とガバナンス">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#aws-cloudtrail" class="md-nav__link">
-    <span class="md-ellipsis">
-      AWS CloudTrail ログ
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      詳細情報の参照
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_12_3" id="__nav_2_12_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Cost
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_12_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_12_3">
-            <span class="md-nav__icon md-icon"></span>
-            Cost
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cost/kubecost/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Using Kubecost
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12_3_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_12_3_2" id="__nav_2_12_3_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Visualizing costs
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_12_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_12_3_2">
-            <span class="md-nav__icon md-icon"></span>
-            Visualizing costs
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cost/cost-visualization/cost/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    AWS Observability services and Cost
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cost/cost-visualization/amazon-cloudwatch/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Amazon CloudWatch
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cost/cost-visualization/amazon-grafana/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Amazon Grafana
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cost/cost-visualization/amazon-prometheus/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Amazon Prometheus
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cost/cost-visualization/aws-xray/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    AWS X-Ray
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -4162,28 +3651,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#performance-insights" class="md-nav__link">
     <span class="md-ellipsis">
-      パフォーマンスインサイトとオペレーティングシステムメトリクス
+      Performance Insights とオペレーティングシステムメトリクス
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="パフォーマンスインサイトとオペレーティングシステムメトリクス">
+    <nav class="md-nav" aria-label="Performance Insights とオペレーティングシステムメトリクス">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      強化モニタリング
+      拡張モニタリング
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#performance-insights_1" class="md-nav__link">
     <span class="md-ellipsis">
-      パフォーマンスインサイト
+      Performance Insights
     </span>
   </a>
   
@@ -4195,7 +3684,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       オープンソースのオブザーバビリティツール
     </span>
@@ -4243,7 +3732,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       監査とガバナンス
     </span>
@@ -4267,7 +3756,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       詳細情報の参照
     </span>
@@ -4294,70 +3783,70 @@
 
 
 <h1 id="amazon-rds-aurora">Amazon RDS と Aurora データベースのモニタリング<a class="headerlink" href="#amazon-rds-aurora" title="Permanent link">&para;</a></h1>
-<p>モニタリングは、Amazon RDS および Aurora データベースクラスターの信頼性、可用性、パフォーマンスを維持するうえで重要な部分です。AWS は、Amazon RDS および Aurora データベースリソースの正常性を監視し、重大な問題になる前に問題を検出し、一貫したユーザーエクスペリエンスのためにパフォーマンスを最適化するいくつかのツールを提供しています。このガイドでは、データベースがスムーズに実行されていることを確認するためのオブザーバビリティのベストプラクティスを提供します。</p>
+<p>モニタリングは、Amazon RDS と Aurora データベースクラスターの信頼性、可用性、パフォーマンスを維持するうえで欠かせない重要な部分です。AWS には Amazon RDS と Aurora データベースリソースの正常性を監視し、重大な問題になる前に検知したり、一貫したユーザーエクスペリエンスのためにパフォーマンスを最適化するいくつかのツールが用意されています。このガイドでは、データベースがスムーズに実行されていることを確認するためのオブザーバビリティのベストプラクティスを提供します。</p>
 <h2 id="_1">パフォーマンスガイドライン<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>ベストプラクティスとして、ワークロードのベースライン パフォーマンスを確立することから始めることをおすすめします。DB インスタンスをセットアップして一般的なワークロードで実行したときに、すべてのパフォーマンス メトリクスの平均値、最大値、最小値をキャプチャします。いくつかの異なるインターバル(例: 1時間、24時間、1週間、2週間など)でこれを行ってください。これにより、何が正常なのかについての考え方が得られます。運用のピーク時間帯とオフピーク時間帯の両方の比較を取得することが役立ちます。次に、この情報を使用して、パフォーマンスが標準レベルを下回っているときを特定できます。</p>
+<p>ベストプラクティスとして、ワークロードのベースライン パフォーマンスを確立することから始めることをお勧めします。DB インスタンスをセットアップして一般的なワークロードで実行するときに、すべてのパフォーマンス メトリクスの平均、最大、最小値をキャプチャしてください。これをさまざまな間隔で行ってください(例: 1 時間、24 時間、1 週間、2 週間など)。これにより、何が正常なのかを把握できます。ピーク時とオフピーク時の両方の比較情報を取得することで役立ちます。この情報を使用して、パフォーマンスが標準レベルを下回っているときを特定できます。</p>
 <h2 id="_2">モニタリングオプション<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <h3 id="amazon-cloudwatch">Amazon CloudWatch メトリクス<a class="headerlink" href="#amazon-cloudwatch" title="Permanent link">&para;</a></h3>
-<p><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/monitoring-cloudwatch.html">Amazon CloudWatch</a> は、<a href="https://aws.amazon.com/rds/">RDS</a> および <a href="https://aws.amazon.com/rds/aurora/">Aurora</a> データベースの監視と管理に不可欠なツールです。データベースのパフォーマンスに関する貴重な洞察を提供し、問題をすばやく特定および解決するのに役立ちます。Amazon RDS および Aurora データベースの両方が、アクティブな各データベースインスタンスについて 1 分間隔の粒度でメトリクスを CloudWatch に送信します。監視はデフォルトで有効になっており、メトリクスは 15 日間利用できます。RDS および Aurora は、<strong>AWS/RDS</strong> 名前空間でインスタンスレベルのメトリクスを Amazon CloudWatch に公開します。</p>
+<p><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/monitoring-cloudwatch.html">Amazon CloudWatch</a> は、<a href="https://aws.amazon.com/rds/">RDS</a> および <a href="https://aws.amazon.com/rds/aurora/">Aurora</a> データベースを監視および管理するための重要なツールです。データベースのパフォーマンスに関する貴重な洞察を提供し、問題の特定と迅速な解決に役立ちます。Amazon RDS と Aurora の両方のデータベースは、アクティブな各データベースインスタンスについて 1 分ごとの粒度でメトリクスを CloudWatch に送信します。モニタリングはデフォルトで有効になっており、メトリクスは 15 日間利用できます。RDS と Aurora は、<strong>AWS/RDS</strong> 名前空間でインスタンスレベルのメトリクスを Amazon CloudWatch に公開します。</p>
 <p>CloudWatch メトリクスを使用することで、データベースのパフォーマンスの傾向やパターンを特定し、この情報を使用して構成を最適化し、アプリケーションのパフォーマンスを向上させることができます。ここでは、監視する主要なメトリクスを示します。</p>
 <ul>
-<li><strong>CPU 利用率</strong> - 使用されているコンピュータ処理容量の割合。</li>
-<li><strong>DB 接続</strong> - DB インスタンスに接続されているクライアントセッションの数。インスタンスのパフォーマンスと応答時間の低下と合わせて、大量のユーザー接続を確認した場合は、データベース接続を制限することを検討してください。DB インスタンスの最適なユーザー接続数は、インスタンスクラスと実行される操作の複雑さによって異なります。データベース接続数を判断するには、DB インスタンスをパラメータグループと関連付けます。</li>
-<li><strong>使用可能メモリ</strong> - DB インスタンスで利用できる RAM の量(メガバイト単位)。[監視] タブのメトリクスにおける赤線は、CPU、メモリ、ストレージメトリクスで 75% に設定されています。インスタンスメモリ消費が頻繁にその線を超える場合は、ワークロードを確認するかインスタンスをアップグレードする必要があることを示しています。 </li>
-<li><strong>ネットワークスループット</strong> - DB インスタンスへの流入および流出ネットワークトラフィックの速度(秒あたりのバイト数)。</li>
+<li><strong>CPU 利用率</strong> - 使用されているコンピュータ処理容量の割合。 </li>
+<li><strong>DB 接続</strong> - DB インスタンスに接続されているクライアントセッションの数。 インスタンスのパフォーマンスと応答時間の低下と合わせて、高い数のユーザー接続が見られる場合は、データベース接続を制限することを検討してください。 DB インスタンスの最適なユーザー接続数は、インスタンスクラスと実行される操作の複雑さによって異なります。 データベース接続数を判断するには、DB インスタンスをパラメータグループに関連付けます。</li>
+<li><strong>空きメモリ</strong> - DB インスタンスで利用できる RAM の量(メガバイト単位)。 モニタリングタブのメトリクスの赤線は、CPU、メモリ、ストレージメトリクスで 75% に設定されています。 インスタンスのメモリ消費が頻繁にその線を超える場合は、ワークロードを確認するかインスタンスをアップグレードする必要があることを示しています。</li>
+<li><strong>ネットワークスループット</strong> - DB インスタンスへのネットワークトラフィックの速度(秒あたりのバイト数)。</li>
 <li><strong>読み取り/書き込みレイテンシ</strong> - 読み取りまたは書き込み操作の平均時間(ミリ秒)。</li>
-<li><strong>読み取り/書き込み IOPS</strong> - 1 秒あたりの平均ディスク読み取りまたは書き込み操作回数。</li>
-<li><strong>空きストレージ領域</strong> - 現在 DB インスタンスで使用されていないディスク領域の量(メガバイト)。使用済み領域が合計ディスク領域の 85% 以上に一貫して達している場合は、ディスク領域の消費を調査してください。インスタンスからデータを削除したり、データをアーカイブしてシステムの領域を解放できるかどうかを確認してください。</li>
+<li><strong>読み取り/書き込み IOPS</strong> - ディスクの読み取りまたは書き込み操作の平均数(秒あたり)。</li>
+<li><strong>空きストレージスペース</strong> - 現在使用されていないディスクスペースの量(メガバイト)。 使用されているスペースが、合計ディスクスペースの 85% を一貫して上回っているか、それに近い場合は、ディスクスペースの消費を調査してください。 インスタンスからデータを削除したり、データをアーカイブして別のシステムに移動したりして、スペースを解放できるかどうかを確認してください。</li>
 </ul>
 <p><img alt="db_cw_metrics.png" src="../../../images/db_cw_metrics.png" /></p>
-<p>パフォーマンス関連の問題をトラブルシューティングするには、最初に最も使用頻度が高くコストのかかるクエリをチューニングすることから始めます。チューニングによってシステムリソースへのプレッシャーが下がるかどうかを確認してください。詳細については、<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_BestPractices.html#CHAP_BestPractices.TuningQueries">クエリのチューニング</a> を参照してください。</p>
-<p>クエリがチューニングされていても問題が続く場合は、データベースインスタンスクラスをアップグレードすることを検討してください。リソース(CPU、RAM、ディスク領域、ネットワーク帯域幅、I/O 容量)が多いインスタンスにアップグレードできます。</p>
-<p>その後、これらのメトリクスが重要なしきい値に達したときにアラートが発生するようにアラームを設定し、問題をできるだけ早く解決するためのアクションを実行できます。</p>
+<p>パフォーマンス関連の問題をトラブルシューティングする場合、最初のステップは、最も頻繁に使用されている高コストなクエリのチューニングです。 これらのクエリをチューニングして、システムリソースへのプレッシャーが低下するかどうかを確認します。 詳細については、<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_BestPractices.html#CHAP_BestPractices.TuningQueries">クエリのチューニング</a> を参照してください。</p>
+<p>クエリがチューニングされているにもかかわらず問題が続く場合は、データベースインスタンスクラスのアップグレードを検討してください。 リソース(CPU、RAM、ディスクスペース、ネットワーク帯域幅、I/O 容量)が多いインスタンスにアップグレードできます。</p>
+<p>その後、これらのメトリクスが重要なしきい値に達したときにアラートを設定し、問題をできるだけ早く解決するためのアクションを実行できます。</p>
 <p>CloudWatch メトリクスの詳細については、<a href="https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/rds-metrics.html">Amazon RDS 用の Amazon CloudWatch メトリクス</a> および <a href="https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/metrics_dimensions.html">CloudWatch コンソールと AWS CLI での DB インスタンスメトリクスの表示</a> を参照してください。</p>
 <h4 id="cloudwatch-logs-insights">CloudWatch Logs Insights<a class="headerlink" href="#cloudwatch-logs-insights" title="Permanent link">&para;</a></h4>
-<p><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html">CloudWatch Logs Insights</a> を使用すると、Amazon CloudWatch Logs のログデータを対話形式で検索および分析できます。操作上の問題により効率的かつ効果的に対応するためのクエリを実行できます。問題が発生した場合は、CloudWatch Logs Insights を使用して潜在的な原因を特定し、導入された修正を検証できます。</p>
-<p>RDS または Aurora データベースクラスターから CloudWatch にログをパブリッシュするには、<a href="https://repost.aws/knowledge-center/rds-aurora-mysql-logs-cloudwatch">RDS または Aurora for MySQL インスタンスのログを CloudWatch にパブリッシュ</a> を参照してください。</p>
-<p>CloudWatch を使用した RDS または Aurora ログの監視の詳細については、<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html">Amazon RDS ログファイルの監視</a> を参照してください。</p>
+<p><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html">CloudWatch Logs Insights</a> を使用すると、Amazon CloudWatch Logs のログデータを対話形式で検索および分析できます。操作上の問題により効率的かつ効果的に対応するのに役立つクエリを実行できます。問題が発生した場合は、CloudWatch Logs Insights を使用して、潜在的な原因を特定し、デプロイされた修正を検証できます。</p>
+<p>RDS または Aurora データベースクラスターから CloudWatch にログを公開するには、<a href="https://repost.aws/knowledge-center/rds-aurora-mysql-logs-cloudwatch">Publish logs for Amazon RDS or Aurora for MySQL instances to CloudWatch</a> を参照してください。</p>
+<p>CloudWatch を使用した RDS または Aurora ログの監視の詳細については、<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html">Monitoring Amazon RDS log file</a> を参照してください。</p>
 <h4 id="cloudwatch">CloudWatch アラーム<a class="headerlink" href="#cloudwatch" title="Permanent link">&para;</a></h4>
-<p>データベースクラスターのパフォーマンスが低下した場合を特定するために、主要なパフォーマンスメトリクスを定期的に監視およびアラートする必要があります。<a href="https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html">Amazon CloudWatch アラーム</a> を使用すると、指定した期間にわたって単一のメトリクスを監視できます。メトリクスが指定したしきい値を超えると、Amazon SNS トピックまたは AWS オートスケーリングポリシーに通知が送信されます。CloudWatch アラームは、特定の状態にあるため単にアクションを起動するわけではありません。むしろ、状態が変更され、アラームをトリガーするために指定された期間中に維持されている必要があります。アラームは、アラームの状態変化が発生したときにのみアクションを起動します。アラーム状態であること自体では不十分です。</p>
-<p>CloudWatch アラームの設定方法は以下のとおりです。</p>
+<p>データベースクラスターのパフォーマンス低下を特定するために、主要なパフォーマンスメトリクスを定期的に監視およびアラートする必要があります。<a href="https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html">Amazon CloudWatch アラーム</a> を使用すると、指定した期間にわたって単一のメトリクスを監視できます。メトリクスが指定したしきい値を超えると、Amazon SNS トピックまたは AWS オートスケーリングポリシーに通知が送信されます。CloudWatch アラームは、特定の状態にあるという理由だけでアクションを起動するわけではありません。むしろ、状態が変更され、指定された期間維持されている必要があります。アラームは、アラームの状態変更が発生したときにのみアクションを起動します。アラーム状態であること自体では不十分です。</p>
+<p>CloudWatch アラームを設定するには、</p>
 <ul>
 <li>AWS Management Console に移動し、<a href="">https://console.aws.amazon.com/rds/</a> で Amazon RDS コンソールを開きます。</li>
 <li>ナビゲーションペインで [Databases] を選択し、DB インスタンスを選択します。</li>
 <li>[Logs &amp; events] を選択します。</li>
 </ul>
-<p>[CloudWatch alarms] セクションで、[Create alarm] を選択します。</p>
+<p>CloudWatch アラームセクションで、[Create alarm] を選択します。</p>
 <p><img alt="db_cw_alarm.png" src="../../../images/db_cw_alarm.png" /></p>
 <ul>
 <li>[Send notifications] で [Yes] を選択し、[Send notifications to] で [New email or SMS topic] を選択します。</li>
-<li>[Topic name] に通知の名前を入力し、[With these recipients] にカンマ区切りのメールアドレスと電話番号のリストを入力します。  </li>
-<li>[Metric] でアラームの統計とメトリクスを選択します。</li>
-<li>[Threshold] で、メトリクスがしきい値より大きいか小さいか等しいかを指定し、しきい値を指定します。</li>
-<li>[Evaluation period] で、アラームの評価期間を選択します。[consecutive period(s) of] で、アラームをトリガーするためにしきい値に達していなければならない期間を選択します。</li>
+<li>[Topic name] に通知の名前を入力し、[With these recipients] にカンマ区切りのメールアドレスと電話番号のリストを入力します。</li>
+<li>[Metric] でアラームの統計情報とメトリクスを設定します。  </li>
+<li>[Threshold] で、メトリクスがしきい値よりも大きいか、小さいか、等しいかを指定し、しきい値を指定します。</li>
+<li>[Evaluation period] で、アラームの評価期間を選択します。 [consecutive period(s) of] で、アラームをトリガーするためにしきい値に達していなければならない期間を選択します。</li>
 <li>[Name of alarm] にアラームの名前を入力します。</li>
-<li>[Create Alarm] を選択します。  </li>
+<li>[Create Alarm] を選択します。</li>
 </ul>
-<p>アラームが [CloudWatch alarms] セクションに表示されます。  </p>
+<p>アラームが CloudWatch アラームセクションに表示されます。</p>
 <p>Multi-AZ DB クラスターレプリカの遅延の Amazon CloudWatch アラームの作成例は<a href="https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/multi-az-db-cluster-cloudwatch-alarm.html">こちら</a>をご覧ください。</p>
 <h4 id="_3">データベース監査ログ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<p>データベース監査ログは、RDS および Aurora データベースで実行されたすべてのアクションの詳細な記録を提供します。これにより、不正アクセス、データ変更、その他の潜在的に有害なアクティビティを監視できます。データベース監査ログのベストプラクティスを以下に示します。</p>
+<p>データベース監査ログは、RDS および Aurora データベースで実行されたすべてのアクションの詳細な記録を提供します。これにより、不正アクセス、データの変更、その他の潜在的に有害なアクティビティを監視できます。データベース監査ログのベストプラクティスを次に示します。</p>
 <ul>
-<li>すべての RDS および Aurora インスタンスでデータベース監査ログを有効にし、関連するすべてのデータをキャプチャするよう設定します。</li>
+<li>すべての RDS および Aurora インスタンスでデータベース監査ログを有効にし、すべての関連データをキャプチャするよう設定します。</li>
 <li>Amazon CloudWatch Logs や Amazon Kinesis Data Streams などの集中ログ管理ソリューションを使用して、データベース監査ログを収集および分析します。 </li>
 <li>データベース監査ログを定期的に監視し、疑わしいアクティビティがあれば迅速に調査および解決するためのアクションを実行します。</li>
 </ul>
-<p>データベース監査ログの設定方法の詳細は、<a href="https://aws.amazon.com/blogs/database/configuring-an-audit-log-to-capture-database-activities-for-amazon-rds-for-mysql-and-amazon-aurora-with-mysql-compatibility/">Configuring an Audit Log to Capture database activities for Amazon RDS and Aurora</a> を参照してください。</p>
+<p>データベース監査ログの設定方法の詳細については、<a href="https://aws.amazon.com/blogs/database/configuring-an-audit-log-to-capture-database-activities-for-amazon-rds-for-mysql-and-amazon-aurora-with-mysql-compatibility/">Configuring an Audit Log to Capture database activities for Amazon RDS and Aurora</a> を参照してください。</p>
 <h4 id="_4">データベースの遅いクエリとエラーログ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<p>遅いクエリのログは、データベース内のパフォーマンスの低いクエリを見つけるのに役立ちます。これにより、遅さの原因を調査し、必要に応じてクエリをチューニングできます。エラーログは、クエリのエラーを見つけるのに役立ち、これによりそれらのエラーによるアプリケーションの変更を見つけることができます。</p>
-<p>CloudWatch Logs Insights (Amazon CloudWatch Logs で対話的にログデータを検索および分析できる) を使用して CloudWatch ダッシュボードを作成することで、遅いクエリログとエラーログを監視できます。</p>
-<p>Amazon RDS のエラーログ、遅いクエリログ、一般ログを有効にして監視するには、<a href="https://repost.aws/knowledge-center/rds-mysql-logs">RDS MySQL 用の遅いクエリログと一般ログの管理</a> を参照してください。Aurora PostgreSQL 用の遅いクエリログを有効にするには、<a href="https://catalog.us-east-1.prod.workshops.aws/workshops/31babd91-aa9a-4415-8ebf-ce0a6556a216/en-US/postgresql-logs/enable-slow-query-log">PostgreSQL 用の遅いクエリログの有効化</a> を参照してください。</p>
-<h2 id="_5">パフォーマンスインサイトとオペレーティングシステムメトリクス<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<h4 id="_6">強化モニタリング<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
-<p><a href="https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html">強化モニタリング</a> を使用すると、DB インスタンスが実行されているオペレーティングシステム (OS) の細かい粒度のメトリクスをリアルタイムで取得できます。</p>
-<p>RDS は強化モニタリングからのメトリクスを Amazon CloudWatch Logs アカウントに配信します。 デフォルトでは、これらのメトリクスは 30 日間保存され、Amazon CloudWatch の <strong>RDSOSMetrics</strong> ロググループに保存されます。 1 秒から 60 秒の間で粒度を選択できます。 CloudWatch Logs から CloudWatch でカスタムメトリクスフィルターを作成し、グラフを CloudWatch ダッシュボードに表示できます。</p>
+<p>遅いクエリのログは、データベース内の低速なクエリを見つけるのに役立ち、遅さの理由を調査し、必要に応じてクエリをチューニングできます。エラーログは、クエリのエラーを見つけるのに役立ち、これにより、それらのエラーによるアプリケーションの変更を見つけることができます。</p>
+<p>Amazon CloudWatch Logs Insights (Amazon CloudWatch Logs のログデータを対話的に検索および分析できる) を使用して、CloudWatch ダッシュボードを作成することで、遅いクエリログとエラーログをモニタリングできます。</p>
+<p>Amazon RDS のエラーログ、遅いクエリログ、一般ログを有効にしてモニタリングするには、<a href="https://repost.aws/knowledge-center/rds-mysql-logs">RDS MySQL の遅いクエリログと一般ログの管理</a> を参照してください。Aurora PostgreSQL の遅いクエリログを有効にするには、<a href="https://catalog.us-east-1.prod.workshops.aws/workshops/31babd91-aa9a-4415-8ebf-ce0a6556a216/en-US/postgresql-logs/enable-slow-query-log">PostgreSQL の遅いクエリログの有効化</a> を参照してください。</p>
+<h2 id="performance-insights">Performance Insights とオペレーティングシステムメトリクス<a class="headerlink" href="#performance-insights" title="Permanent link">&para;</a></h2>
+<h4 id="_5">拡張モニタリング<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p><a href="https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html">拡張モニタリング</a> を使用すると、DB インスタンスが実行されているオペレーティングシステム (OS) のリアルタイムの詳細なメトリクスを取得できます。</p>
+<p>RDS は、拡張モニタリングのメトリクスを Amazon CloudWatch Logs アカウントに配信します。 デフォルトでは、これらのメトリクスは 30 日間保存され、Amazon CloudWatch の <strong>RDSOSMetrics</strong> ロググループに保存されます。 1 秒から 60 秒の間で粒度を選択するオプションがあります。CloudWatch Logs から CloudWatch でカスタムメトリクスフィルターを作成し、CloudWatch ダッシュボードにグラフを表示できます。</p>
 <p><img alt="db_enhanced_monitoring_loggroup.png" src="../../../images/db_enhanced_monitoring_loggroup.png" /></p>
-<p>強化モニタリングには、OS レベルのプロセスリストも含まれます。 現在、強化モニタリングは次のデータベースエンジンで利用できます: </p>
+<p>拡張モニタリングには、OS レベルのプロセスリストも含まれます。 現在、次のデータベースエンジンで拡張モニタリングを利用できます: </p>
 <ul>
 <li>MariaDB</li>
 <li>Microsoft SQL Server  </li>
@@ -4365,26 +3854,26 @@
 <li>Oracle</li>
 <li>PostgreSQL</li>
 </ul>
-<p><strong>CloudWatch と強化モニタリングの違い</strong>
-CloudWatch は、DB インスタンスのハイパーバイザから CPU 使用率に関するメトリクスを収集します。対照的に、強化モニタリングは、DB インスタンス上のエージェントからメトリクスを収集します。 ハイパーバイザは仮想マシン (VM) を作成および実行します。 ハイパーバイザを使用すると、インスタンスはメモリと CPU を仮想的に共有することで、複数のゲスト VM をサポートできます。 ハイパーバイザ層がわずかな処理を実行するため、CloudWatch と強化モニタリングの測定値が異なる場合があります。 インスタンスが小さいインスタンスクラスを使用している場合、差は大きくなる可能性があります。 このシナリオでは、複数の仮想マシン (VM) が物理インスタンス上のハイパーバイザ層で管理されている可能性が高くなります。</p>
-<p>強化モニタリングで利用できるすべてのメトリクスの詳細については、<a href="https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/USER_Monitoring-Available-OS-Metrics.html">強化モニタリングの OS メトリクス</a> を参照してください。</p>
+<p><strong>CloudWatch と拡張モニタリングの違い</strong>
+CloudWatch は、DB インスタンスのハイパーバイザーから CPU 使用率に関するメトリクスを収集します。対照的に、拡張モニタリングは、DB インスタンス上のエージェントからそのメトリクスを収集します。 ハイパーバイザーは仮想マシン (VM) を作成および実行します。 ハイパーバイザーを使用すると、インスタンスはメモリと CPU を仮想的に共有することにより、複数のゲスト VM をサポートできます。 ハイパーバイザー層が少量の作業を実行するため、CloudWatch と拡張モニタリングの測定値の間に差異がある場合があります。 DB インスタンスでより小さいインスタンスクラスを使用する場合、差異は大きくなる可能性があります。 このシナリオでは、複数の仮想マシン (VM) が物理インスタンス上のハイパーバイザー層によって管理されている可能性が高くなります。</p>
+<p>拡張モニタリングで利用できるすべてのメトリクスの詳細については、<a href="https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/USER_Monitoring-Available-OS-Metrics.html">拡張モニタリングの OS メトリクス</a> を参照してください。</p>
 <p><img alt="db-enhanced-monitoring.png" src="../../../images/db_enhanced_monitoring.png" /></p>
-<h4 id="_7">パフォーマンスインサイト<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<p><a href="https://aws.amazon.com/rds/performance-insights/">Amazon RDS Performance Insights</a> は、データベースの負荷をすばやく評価し、アクションを取る必要があるタイミングと場所を判断するのに役立つデータベースパフォーマンスチューニングおよびモニタリング機能です。Performance Insights ダッシュボードを使用すると、db クラスターのデータベース負荷を視覚化し、待ち時間、SQL ステートメント、ホスト、ユーザー別に負荷をフィルタリングできます。これにより、症状を追跡するのではなく、根本原因にスポットライトを当てることができます。Performance Insights は、アプリケーションのパフォーマンスに影響を与えない軽量のデータ収集方法を使用し、どの SQL ステートメントが負荷の原因であるかと、なぜそうなっているかを簡単に確認できるようにします。</p>
-<p>Performance Insights は 7 日間の無料のパフォーマンス履歴保持を提供し、料金を支払うことで最大 2 年間まで延長できます。Performance Insights は RDS 管理コンソールまたは AWS CLI から有効にできます。Performance Insights は、カスタマーやサードパーティが Performance Insights を独自のカスタムツールと統合できるように、パブリックに利用可能な API も公開しています。  </p>
+<h4 id="performance-insights_1">Performance Insights<a class="headerlink" href="#performance-insights_1" title="Permanent link">&para;</a></h4>
+<p><a href="https://aws.amazon.com/rds/performance-insights/">Amazon RDS Performance Insights</a> は、データベースの負荷をすばやく評価し、アクションを取る必要があるタイミングと場所を判断するのに役立つデータベースパフォーマンスチューニングおよびモニタリング機能です。Performance Insights ダッシュボードを使用すると、DB クラスターのデータベース負荷を視覚化し、待ち時間、SQL ステートメント、ホスト、ユーザー別に負荷をフィルタリングできます。これにより、症状を追跡するのではなく、根本原因を特定できます。Performance Insights は、アプリケーションのパフォーマンスに影響を与えない軽量のデータ収集方法を使用し、どの SQL ステートメントが負荷の原因であるかと、なぜそうなっているかを簡単に確認できます。</p>
+<p>Performance Insights は 7 日間の無料のパフォーマンス履歴保持を提供しており、料金を支払うことで最大 2 年間まで延長できます。Performance Insights は、RDS 管理コンソールまたは AWS CLI から有効にできます。Performance Insights はパブリックに利用可能な API も公開しているため、カスタマーやサードパーティは Performance Insights を独自のカスタムツールと統合できます。  </p>
 <div class="admonition 注意">
 <p class="admonition-title">注意</p>
-<p>現在、RDS Performance Insights は Aurora (PostgreSQL および MySQL 互換エディション)、Amazon RDS for PostgreSQL、MySQL、MariaDB、SQL Server、Oracle 用のみ利用できます。</p>
+<p>現在、RDS Performance Insights は Aurora (PostgreSQL および MySQL 互換エディション)、Amazon RDS for PostgreSQL、MySQL、MariaDB、SQL Server、Oracle でのみ利用できます。</p>
 </div>
-<p><strong>DBLoad</strong> は、平均アクティブセッション数を表す主要メトリックです。Performance Insights では、このデータが <strong>db.load.avg</strong> メトリックとしてクエリされます。</p>
+<p><strong>DBLoad</strong> は、平均アクティブセッション数を表す主要メトリクスです。Performance Insights では、このデータは <strong>db.load.avg</strong> メトリクスとしてクエリされます。</p>
 <p><img alt="db_perf_insights.png" src="../../../images/db_perf_insights.png" /></p>
-<p>Aurora での Performance Insights の使用方法の詳細については、以下を参照してください。 <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html">Monitoring DB load with Performance Insights on Amazon Aurora</a>。</p>
-<h2 id="_8">オープンソースのオブザーバビリティツール<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>Aurora で Performance Insights を使用する詳細については、以下を参照してください。 <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html">Amazon Aurora での Performance Insights による DB 負荷のモニタリング</a>。</p>
+<h2 id="_6">オープンソースのオブザーバビリティツール<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <h4 id="amazon-managed-grafana">Amazon Managed Grafana<a class="headerlink" href="#amazon-managed-grafana" title="Permanent link">&para;</a></h4>
-<p><a href="https://aws.amazon.com/grafana/">Amazon Managed Grafana</a> は、Amazon RDS や Aurora データベースからのデータを可視化および分析するのに役立つ、完全マネージドなサービスです。</p>
-<p>Amazon CloudWatch の <strong>AWS/RDS ネームスペース</strong> には、Amazon RDS と Amazon Aurora で実行されているデータベースエンティティに適用される主要なメトリクスが含まれています。 Amazon Managed Grafana で RDS/Aurora データベースの正常性と潜在的なパフォーマンスの問題を追跡および確認するには、CloudWatch データソースを利用できます。</p>
+<p><a href="https://aws.amazon.com/grafana/">Amazon Managed Grafana</a> は、RDS および Aurora データベースからのデータを視覚化および分析するのが簡単な、完全マネージドサービスです。</p>
+<p>Amazon CloudWatch の <strong>AWS/RDS 名前空間</strong> には、Amazon RDS および Amazon Aurora で実行されているデータベースエンティティに適用される主要なメトリクスが含まれています。Amazon Managed Grafana で RDS/Aurora データベースの正常性と潜在的なパフォーマンスの問題を視覚化および追跡するには、CloudWatch データソースを活用できます。</p>
 <p><img alt="amg-rds-aurora.png" src="../../../images/amg-rds-aurora.png" /></p>
-<p>現時点では、CloudWatch で利用できるのは基本的な Performance Insights メトリクスのみであり、データベースのパフォーマンスを分析し、データベース内のボトルネックを特定するには不十分です。 Amazon Managed Grafana で RDS Performance Insight メトリクスを可視化し、シングルパネでの可視性を実現するには、カスタム Lambda 関数を使用してすべての RDS Performance Insights メトリクスを収集し、カスタム CloudWatch メトリクスネームスペースに公開できます。 これらのメトリクスが Amazon CloudWatch で利用できるようになったら、Amazon Managed Grafana で可視化できます。</p>
+<p>現時点では、CloudWatch で利用できるのは基本的な Performance Insights メトリクスのみであり、データベースパフォーマンスを分析し、データベース内のボトルネックを特定するには不十分です。Amazon Managed Grafana で RDS Performance Insight メトリクスを視覚化し、シングルパネオブグラスの可視性を実現するには、カスタム Lambda 関数を使用してすべての RDS Performance Insights メトリクスを収集し、カスタム CloudWatch メトリクス名前空間に公開できます。これらのメトリクスが Amazon CloudWatch で利用できるようになったら、Amazon Managed Grafana で視覚化できます。</p>
 <p>RDS Performance Insights メトリクスを収集するカスタム Lambda 関数をデプロイするには、次の GitHub リポジトリをクローンし、install.sh スクリプトを実行します。</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ git clone https://github.com/aws-observability/observability-best-practices.git
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$ cd sandbox/monitor-aurora-with-grafana
@@ -4392,10 +3881,10 @@ CloudWatch は、DB インスタンスのハイパーバイザから CPU 使用�
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>$ chmod +x install.sh
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>$ ./install.sh
 </span></code></pre></div>
-<p>上記のスクリプトは、AWS CloudFormation を使用してカスタム Lambda 関数と IAM ロールをデプロイします。Lambda 関数は自動的に 10 分ごとにトリガーされ、RDS Performance Insights API を呼び出してカスタムメトリクスを /AuroraMonitoringGrafana/PerformanceInsights という名前の Amazon CloudWatch のカスタムネームスペースに公開します。</p>
+<p>上記のスクリプトは、AWS CloudFormation を使用してカスタム Lambda 関数と IAM ロールをデプロイします。Lambda 関数は 10 分ごとに自動的にトリガーされ、RDS Performance Insights API を呼び出し、カスタムメトリクスを Amazon CloudWatch の /AuroraMonitoringGrafana/PerformanceInsights カスタム名前空間に公開します。</p>
 <p><img alt="db_performanceinsights_amg.png" src="../../../images/db_performanceinsights_amg.png" /></p>
 <p>カスタム Lambda 関数のデプロイと Grafana ダッシュボードの詳細な手順については、<a href="https://aws.amazon.com/blogs/mt/monitoring-amazon-rds-and-amazon-aurora-using-amazon-managed-grafana/">Amazon Managed Grafana での Performance Insights</a> を参照してください。</p>
-<p>データベースの意図しない変更をすばやく特定し、アラートを使用して通知することで、中断を最小限に抑えるためのアクションを実行できます。Amazon Managed Grafana は、SNS、Slack、PagerDuty など、アラート通知を送信できる複数の通知チャネルをサポートしています。 <a href="https://docs.aws.amazon.com/grafana/latest/userguide/alerts-overview.html">Grafana アラート</a> では、Amazon Managed Grafana でのアラートの設定方法の詳細を確認できます。</p>
+<p>データベースで意図しない変更が発生した場合にすばやく特定し、アラートを使用して通知することで、中断を最小限に抑えるためのアクションを実行できます。Amazon Managed Grafana は、SNS、Slack、PagerDuty など、アラート通知を送信できる複数の通知チャネルをサポートしています。アラートの設定の詳細については、<a href="https://docs.aws.amazon.com/grafana/latest/userguide/alerts-overview.html">Grafana アラーティング</a> を参照してください。</p>
 <!-- blank line -->
 <figure class="video_container">
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/Uj9UJ1mXwEA" title="YouTube video player" width="560"></iframe>
@@ -4404,32 +3893,32 @@ CloudWatch は、DB インスタンスのハイパーバイザから CPU 使用�
 
 <h2 id="aiops-">AIOps - マシンラーニングベースのパフォーマンスボトルネック検出<a class="headerlink" href="#aiops-" title="Permanent link">&para;</a></h2>
 <h4 id="amazon-devops-guru-for-rds">Amazon DevOps Guru for RDS<a class="headerlink" href="#amazon-devops-guru-for-rds" title="Permanent link">&para;</a></h4>
-<p><a href="https://aws.amazon.com/devops-guru/features/devops-guru-for-rds/">Amazon DevOps Guru for RDS</a> を使用すると、パフォーマンスのボトルネックや運用上の問題のためにデータベースを監視できます。Performance Insights メトリクスを使用し、機械学習(ML)で分析して、パフォーマンスの問題に関するデータベース固有の分析を提供し、修正アクションを推奨します。DevOps Guru for RDS は、ホストリソースの過剰利用、データベースのボトルネック、SQL クエリの誤動作など、さまざまなパフォーマンス関連のデータベースの問題を特定および分析できます。問題または異常な動作が検出されると、DevOps Guru for RDS は調査結果を DevOps Guru コンソールに表示し、<a href="https://aws.amazon.com/jp/eventbridge/">Amazon EventBridge</a> または <a href="https://aws.amazon.com/jp/sns/">Amazon Simple Notification Service(SNS)</a> を使用して通知を送信するため、DevOps または SRE チームは、顧客に影響を及ぼす障害になる前に、パフォーマンスと運用上の問題に対してリアルタイムでアクションを実行できます。</p>
-<p>DevOps Guru for RDS は、データベース メトリクスのベースラインを確立します。ベースライニングとは、一定期間データベース パフォーマンス メトリクスを分析して、通常の動作を確立することを意味します。Amazon DevOps Guru for RDS は、確立されたベースラインに対する異常を検出するために機械学習を使用します。ワークロード パターンが変更されると、DevOps Guru for RDS は、新しい通常値に対して異常を検出するために使用される新しいベースラインを確立します。</p>
+<p><a href="https://aws.amazon.com/devops-guru/features/devops-guru-for-rds/">Amazon DevOps Guru for RDS</a> を使用すると、パフォーマンスのボトルネックや運用上の問題のためにデータベースを監視できます。Performance Insights メトリクスを使用し、機械学習(ML)で分析して、パフォーマンスの問題に関するデータベース固有の分析を提供し、修正アクションを推奨します。DevOps Guru for RDS は、ホストリソースの過剰利用、データベースのボトルネック、SQL クエリの誤動作など、さまざまなパフォーマンス関連のデータベースの問題を特定および分析できます。 問題または異常な動作が検出されると、DevOps Guru for RDS は DevOps Guru コンソールに調査結果を表示し、<a href="https://aws.amazon.com/pm/eventbridge">Amazon EventBridge</a> または <a href="https://aws.amazon.com/pm/sns">Amazon Simple Notification Service(SNS)</a> を使用して通知を送信するため、DevOps または SRE チームは、パフォーマンスおよび運用上の問題が顧客に影響を及ぼす障害になる前に、それらに対してリアルタイムでアクションを実行できます。</p>
+<p>DevOps Guru for RDS は、データベースメトリクスのベースラインを確立します。ベースライニングとは、一定期間データベースパフォーマンスメトリクスを分析して、通常の動作を確立することを意味します。Amazon DevOps Guru for RDS は次に、機械学習(ML)を使用して、確立されたベースラインに対する異常を検出します。ワークロードパターンが変更された場合、DevOps Guru for RDS は新しい通常動作に対して異常を検出するために使用される新しいベースラインを確立します。</p>
 <div class="admonition 注意">
 <p class="admonition-title">注意</p>
-<p>新しいデータベース インスタンスの場合、Amazon DevOps Guru for RDS は、データベースの使用パターンの分析と通常の動作と見なされるものの確立が必要なため、最初のベースラインを確立するまでに最大 2 日かかります。</p>
+<p>新しいデータベースインスタンスの場合、Amazon DevOps Guru for RDS は、データベースの使用パターンの分析と通常の動作の確立が必要なため、最初のベースラインを確立するまでに最大 2 日かかります。</p>
 </div>
 <p><img alt="db_dgr_anomaly.png.png" src="../../../images/db_dgr_anomaly.png" /></p>
 <p><img alt="db_dgr_recommendation.png" src="../../../images/db_dgr_recommendation.png" /></p>
-<p>開始方法の詳細については、<a href="https://aws.amazon.com/jp/blogs/news/new-amazon-devops-guru-for-rds-to-detect-diagnose-and-resolve-amazon-aurora-related-issues-using-ml/">ML を使用した Amazon Aurora 関連の問題の検出、診断、解決のための新しい Amazon DevOps Guru for RDS</a> をご覧ください。</p>
+<p>開始方法の詳細については、<a href="https://aws.amazon.com/blogs/aws/new-amazon-devops-guru-for-rds-to-detect-diagnose-and-resolve-amazon-aurora-related-issues-using-ml/">機械学習を使用した Amazon Aurora 関連の問題の検出、診断、解決のための新しい Amazon DevOps Guru for RDS</a> をご覧ください。</p>
 <!-- blank line -->
 <figure class="video_container">
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/N3NNYgzYUDA" title="YouTube video player" width="560"></iframe>
 </figure>
 <!-- blank line -->
 
-<h2 id="_9">監査とガバナンス<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h2 id="_7">監査とガバナンス<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <h4 id="aws-cloudtrail">AWS CloudTrail ログ<a class="headerlink" href="#aws-cloudtrail" title="Permanent link">&para;</a></h4>
-<p><a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html">AWS CloudTrail</a> は、RDS でユーザー、ロール、AWS サービスによって実行されたアクションの記録を提供します。CloudTrail はコンソールからの呼び出しや RDS API オペレーションへのコード呼び出しを含む、RDS のすべての API 呼び出しをイベントとしてキャプチャします。CloudTrail で収集した情報を使用することで、RDS へのリクエストの内容、リクエストの発信元 IP アドレス、リクエストを行った人、リクエストの日時、その他の詳細を確認できます。 詳細については、<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/logging-using-cloudtrail.html">Monitoring Amazon RDS API calls in AWS CloudTrail</a> を参照してください。</p>
-<p>詳細は、<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/logging-using-cloudtrail.html">Monitoring Amazon RDS API calls in AWS CloudTrail</a> を参照してください。</p>
-<h2 id="_10">詳細情報の参照<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p><a href="https://docs.aws.amazon.com/ja_jp/awscloudtrail/latest/userguide/cloudtrail-user-guide.html">AWS CloudTrail</a> は、RDS でユーザー、ロール、AWS サービスによって実行されたアクションの記録を提供します。CloudTrail はコンソールからの呼び出しや RDS API 操作へのコード呼び出しを含む、RDS のすべての API 呼び出しをイベントとしてキャプチャします。CloudTrail で収集した情報を使用することで、RDS へのリクエストの内容、リクエストの発信元 IP アドレス、リクエストを行った人物、リクエストの日時などの詳細を確認できます。 詳細については、<a href="https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/logging-using-cloudtrail.html">AWS CloudTrail での Amazon RDS API 呼び出しのモニタリング</a> を参照してください。</p>
+<p>詳細は、<a href="https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/logging-using-cloudtrail.html">AWS CloudTrail での Amazon RDS API 呼び出しのモニタリング</a>を参照してください。</p>
+<h2 id="_8">詳細情報の参照<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <p><a href="https://aws.amazon.com/blogs/mt/monitoring-amazon-rds-and-amazon-aurora-using-amazon-managed-grafana/">ブログ - Amazon Managed Grafana を使用した RDS と Aurora データベースの監視</a></p>
 <p><a href="https://www.youtube.com/watch?v=Uj9UJ1mXwEA">動画 - Amazon Managed Grafana を使用した RDS と Aurora データベースの監視</a></p>
 <p><a href="https://aws.amazon.com/blogs/database/creating-an-amazon-cloudwatch-dashboard-to-monitor-amazon-rds-and-amazon-aurora-mysql/">ブログ - Amazon CloudWatch を使用した RDS と Aurora データベースの監視</a></p>
 <p><a href="https://aws.amazon.com/blogs/database/build-proactive-database-monitoring-for-amazon-rds-with-amazon-cloudwatch-logs-aws-lambda-and-amazon-sns/">ブログ - Amazon CloudWatch Logs、AWS Lambda、Amazon SNS を使用した Amazon RDS のプロアクティブなデータベース監視の構築</a></p>
-<p><a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/MonitoringOverview.html">公式ドキュメント - Amazon Aurora の監視ガイド</a></p>
-<p><a href="https://catalog.workshops.aws/awsauroramysql/en-US/provisioned/perfobserve">ハンズオンワークショップ - Amazon Aurora の SQL パフォーマンスの問題の観察と特定</a></p>
+<p><a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/MonitoringOverview.html">公式ドキュメント - Amazon Aurora 監視ガイド</a></p>
+<p><a href="https://catalog.workshops.aws/awsauroramysql/en-US/provisioned/perfobserve">ハンズオンワークショップ - Amazon Aurora での SQL パフォーマンスの観測と特定</a></p>
 
 
 
