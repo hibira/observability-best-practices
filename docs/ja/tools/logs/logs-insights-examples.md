@@ -1,22 +1,24 @@
-# CloudWatch Logs Insights のクエリ例
+# CloudWatch Logs Insights の例クエリ
 
-[CloudWatch Logs Insights](https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/logs/AnalyzingLogData.html) は、CloudWatch ログデータを分析およびクエリするための強力なプラットフォームを提供します。 いくつかのシンプルであるが強力なコマンドを使用して、SQL ライクなクエリ言語でログデータを対話的に検索できます。
+[CloudWatch Logs Insights](https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/logs/AnalyzingLogData.html) は、CloudWatch ログデータを分析およびクエリするための強力なプラットフォームを提供します。
+SQL に似たクエリ言語を使用して、ログデータを対話的に検索できます。簡単ながら強力なコマンドがいくつか用意されています。
 
-CloudWatch Logs Insights は、次のカテゴリのためのサンプルクエリをすぐに利用できるように用意しています:
+CloudWatch Logs Insights には、以下のカテゴリの事前定義された例クエリが用意されています。
 
 - Lambda
-- VPC フローログ  
+- VPC フローログ
 - CloudTrail
 - 一般的なクエリ
 - Route 53
 - AWS AppSync
-- NAT ゲートウェイ
+- NAT Gateway
 
-このベストプラクティスガイドのこのセクションでは、現在ボックス付属のサンプルには含まれていないその他のタイプのログのサンプルクエリをいくつか提供します。 このリストは時間の経過とともに進化し変化するでしょう。GitHub で [issue](https://github.com/aws-observability/observability-best-practices/issues) を残すことで、独自のサンプルをレビューのために送信できます。
+このベストプラクティスガイドのセクションでは、事前定義の例に含まれていないその他のログタイプの例クエリを紹介します。
+このリストは時間とともに進化・変更されます。独自の例を提出して確認を求めるには、GitHub の [issue](https://github.com/aws-observability/observability-best-practices/issues) に投稿してください。
 
 ## API Gateway
 
-### HTTP メソッドタイプを含む最新 20 件のメッセージ
+### 最後の 20 件の HTTP メソッドタイプを含むメッセージ
 
 ```
 filter @message like /$METHOD/ 
@@ -25,20 +27,20 @@ filter @message like /$METHOD/
 | limit 20
 ```
 
-このクエリは、指定した HTTP メソッドを含む直近 20 件のログメッセージをタイムスタンプの降順で返します。**METHOD** を検索対象のメソッドに置き換えます。このクエリの使用例を次に示します。
+このクエリは、特定の HTTP メソッドを含む最後の 20 件のログメッセージを、タイムスタンプの降順で返します。**METHOD** を検索するメソッドに置き換えてください。このクエリの使用例は次のとおりです。
 
 ```
 filter @message like /POST/ 
 | fields @timestamp, @message
 | sort @timestamp desc
 | limit 20
-```  
+```
 
 !!! tip
 
-    $limit の値を変更することで、返されるメッセージ数を変更できます。
+    $limit の値を変更すると、返されるメッセージ数が変わります。
 
-### IP でソートされた上位 20 の通信元
+### IP でソートされたトップ 20 の Talkers
 
 ```
 fields @timestamp, @message
@@ -47,9 +49,9 @@ fields @timestamp, @message
 | limit 20
 ```
 
-このクエリは、IP でソートされた上位 20 の通信元を返します。これは API に対する悪意のあるアクティビティを検出するのに役立ちます。
+このクエリは、IP でソートされたトップ 20 の Talkers を返します。これは、API に対する悪意のある活動を検出するのに役立ちます。
 
-次のステップとして、メソッドタイプの追加フィルタを追加できます。たとえば、このクエリは IP ごとの上位の通信元を示しますが、「PUT」メソッド呼び出しのみに限定されます。
+次のステップとして、メソッドタイプの追加フィルターを追加できます。たとえば、このクエリは IP によるトップの Talkers を表示しますが、"PUT" メソッド呼び出しのみを表示します。
 
 ```
 fields @timestamp, @message
@@ -61,7 +63,7 @@ fields @timestamp, @message
 
 ## CloudTrail ログ
 
-### エラーコード別にグループ化された API スロットリングエラー
+### エラーカテゴリごとにグループ化された API スロットリングエラー
 
 ```
 stats count(errorCode) as eventCount by eventSource, eventName, awsRegion, userAgent, errorCode
@@ -69,13 +71,13 @@ stats count(errorCode) as eventCount by eventSource, eventName, awsRegion, userA
 | sort eventCount desc
 ```
 
-このクエリを使用すると、カテゴリ別にグループ化された API スロットリングエラーを降順で表示できます。
+このクエリを使用すると、カテゴリごとにグループ化された API スロットリングエラーが降順で表示されます。
 
 !!! tip
-    
-    このクエリを使用するには、まず [CloudTrail ログを CloudWatch に送信](https://docs.aws.amazon.com/ja_jp/awscloudtrail/latest/userguide/send-cloudtrail-events-to-cloudwatch-logs.html) する必要があります。
 
-### ライングラフでのルートアカウントアクティビティ
+    このクエリを使用するには、まず [CloudTrail ログを CloudWatch に送信する](https://docs.aws.amazon.com/ja_jp/awscloudtrail/latest/userguide/send-cloudtrail-events-to-cloudwatch-logs.html) 必要があります。
+
+### ライングラフでのルートアカウントのアクティビティ
 
 ```
 fields @timestamp, @message, userIdentity.type 
@@ -83,15 +85,15 @@ fields @timestamp, @message, userIdentity.type
 | stats count() as RootActivity by bin(5m)
 ```
 
-このクエリを使用すると、ルートアカウントのアクティビティをライングラフで視覚化できます。このクエリは時間経過とともにルートアクティビティを集計し、5 分ごとの区間内でのルートアクティビティの発生回数をカウントします。
+このクエリを使用すると、ルートアカウントのアクティビティをライングラフで可視化できます。このクエリは、5 分間隔ごとにルートアクティビティの発生回数をカウントし、時間経過に伴うルートアクティビティを集計します。
 
 !!! tip
-    
-     [グラフでログデータを視覚化する](https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/logs/CWL_Insights-Visualizing-Log-Data.html)
+
+     [ログデータをグラフで可視化する](https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/logs/CWL_Insights-Visualizing-Log-Data.html)
 
 ## VPC フローログ
 
-### 選択した送信元 IP アドレスのフローログをアクションが REJECT であるものにフィルタリング
+### 選択した送信元 IP アドレスのフロー ログをアクションが REJECT の場合にフィルタリングする
 
 ```
 fields @timestamp, @message, @logStream, @log  | filter srcAddr like '$SOURCEIP' and action = 'REJECT'
@@ -99,10 +101,10 @@ fields @timestamp, @message, @logStream, @log  | filter srcAddr like '$SOURCEIP'
 | limit 20
 ```
 
-このクエリは、$SOURCEIP からの「REJECT」を含む直近 20 件のログメッセージを返します。これは、トラフィックが明示的に拒否されているか、クライアント側のネットワーク構成の問題があるかどうかを検出するために使用できます。 
+このクエリは、$SOURCEIP からの 'REJECT' を含む最新の 20 件のログメッセージを返します。これを使用すると、トラフィックが明示的に拒否されているか、クライアント側のネットワーク構成に問題があるかを検出できます。
 
 !!! tip
-    '$SOURCEIP' を調べたい IP アドレスの値に置き換えてください。
+    '$SOURCEIP' を関心のある IP アドレスの値に置き換えることを忘れずに
 
 ```
 fields @timestamp, @message, @logStream, @log  | filter srcAddr like '10.0.0.5' and action = 'REJECT'
@@ -110,25 +112,27 @@ fields @timestamp, @message, @logStream, @log  | filter srcAddr like '10.0.0.5' 
 | limit 20
 ```
 
-### アベイラビリティゾーン別にネットワークトラフィックをグルーピング
+### 可用性ゾーンごとにネットワークトラフィックをグループ化する
 
 ```
 stats sum(bytes / 1048576) as Traffic_MB by azId as AZ_ID 
 | sort Traffic_MB desc
 ```
 
-このクエリは、アベイラビリティゾーン(AZ)別にネットワークトラフィックデータを取得します。バイト数を合計してメガバイト(MB)に変換することで、トラフィックの総量を計算します。結果は、各 AZ のトラフィック量を基準に降順で並べ替えられます。
+このクエリは、可用性ゾーン (AZ) ごとにグループ化されたネットワークトラフィックデータを取得します。
+バイトの合計をメガバイト (MB) に変換することで、各 AZ のトラフィック量を計算します。
+結果は、各 AZ のトラフィック量に基づいて降順に並べ替えられます。
 
-### フロー方向別にネットワークトラフィックをグルーピング
+### ネットワークトラフィックをフロー方向でグループ化
 
 ```
 stats sum(bytes / 1048576) as Traffic_MB by flowDirection as Flow_Direction 
 | sort by Bytes_MB desc
 ```
 
-このクエリは、フロー方向(イングレスまたはエグレス)でグループ化されたネットワークトラフィックを分析するように設計されています。
+このクエリは、フロー方向 (Ingress または Egress) でグループ化されたネットワークトラフィックを分析するように設計されています。
 
-### 送信元 IP アドレスと送信先 IP アドレス別の上位 10 データ転送
+### ソース IP アドレスとデスティネーション IP アドレスごとのデータ転送トップ 10
 
 ```
 stats sum(bytes / 1048576) as Data_Transferred_MB by srcAddr as Source_IP, dstAddr as Destination_IP 
@@ -136,4 +140,4 @@ stats sum(bytes / 1048576) as Data_Transferred_MB by srcAddr as Source_IP, dstAd
 | limit 10
 ```
 
-このクエリは、送信元 IP アドレスと送信先 IP アドレス別の上位 10 データ転送を取得します。このクエリにより、特定の送信元 IP アドレスと送信先 IP アドレス間で最も大きなデータ転送を特定できます。
+このクエリは、ソース IP アドレスとデスティネーション IP アドレスごとのデータ転送トップ 10 を取得します。このクエリを使用すると、特定のソースとデスティネーション IP アドレス間で最も重要なデータ転送を特定できます。

@@ -1,10 +1,10 @@
-# コントリビューター
+# 貢献者
 
-このサイトのコンテンツは、ソリューションアーキテクト、AWS Observability サービスチームのメンバー、および組織全体のその他のボランティアによって管理されています。私たちの目標は、オブザーバビリティの分野で AWS サービスとオープンソースプロジェクトを設定して使用する方法について、関連するベストプラクティスの発見を促進することです。
+このサイトのコンテンツは、ソリューションアーキテクト、AWS Observability サービスチームのメンバー、および組織全体のボランティアによって維持されています。私たちの目標は、AWS サービスとオブザーバビリティ分野のオープンソースプロジェクトのセットアップと使用方法に関する関連するベストプラクティスの発見を改善することです。
 
-これまでのレシピとコンテンツへの貢献は、概ね次の人々からのものです。
+これまでのレシピやコンテンツ貢献は、以下の人々によるものです。
 
-| Authors             | Authors                     | Authors           | Authors            |
+| 著者                | 著者                        | 著者              | 著者               |
 | ------------------- | --------------------------- | ----------------- | ------------------ |
 | Alolita Sharma      | Aly Shah Imtiaz             | Helen Ashton      | Elamaran Shanmugam |
 | Dinesh Boddula      | Imaya Kumar Jagannathan     | Dieter Adant      | Eric Hsueh         |
@@ -16,8 +16,6 @@
 | Nirmal Mehta        | Lucas Vieira Souza da Silva | William Armiros   | Abhi Khanna        |
 | Arvind Raghunathan  | Doyita Mitra                | Rahul Popat       | Taiki Hibira       |
 
-
-このサイトで公開されているすべてのレシピは、次のURLから入手できることに注意してください。
-[MIT-0][mit0] ライセンスは、通常のMITライセンスを修正したもので、帰属表示の要件がなくなりました。
+このサイトで公開されているすべてのレシピは、[MIT-0][mit0] ライセンスの下で利用可能です。これは通常の MIT ライセンスを変更し、帰属の要件を削除したものです。
 
 [mit0]: https://github.com/aws/mit-0
