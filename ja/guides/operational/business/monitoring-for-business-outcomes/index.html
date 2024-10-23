@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.4.0">
 <title data-rh="true">なぜオブザーバビリティを行うべきなのか？ | AWS Observability Best Practices</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://aws-observability.github.io/observability-best-practices/ja/guides/operational/business/monitoring-for-business-outcomes"><meta data-rh="true" property="og:locale" content="ja"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="ja"><meta data-rh="true" name="docsearch:language" content="ja"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="なぜオブザーバビリティを行うべきなのか？ | AWS Observability Best Practices"><meta data-rh="true" name="description" content="YouTube の オブザーバビリティ戦略の開発 をご覧ください"><meta data-rh="true" property="og:description" content="YouTube の オブザーバビリティ戦略の開発 をご覧ください"><link data-rh="true" rel="icon" href="/observability-best-practices/ja/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://aws-observability.github.io/observability-best-practices/ja/guides/operational/business/monitoring-for-business-outcomes"><link data-rh="true" rel="alternate" href="https://aws-observability.github.io/observability-best-practices/guides/operational/business/monitoring-for-business-outcomes" hreflang="en"><link data-rh="true" rel="alternate" href="https://aws-observability.github.io/observability-best-practices/ja/guides/operational/business/monitoring-for-business-outcomes" hreflang="ja"><link data-rh="true" rel="alternate" href="https://aws-observability.github.io/observability-best-practices/guides/operational/business/monitoring-for-business-outcomes" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/observability-best-practices/ja/blog/rss.xml" title="AWS Observability Best Practices RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/observability-best-practices/ja/blog/atom.xml" title="AWS Observability Best Practices Atom Feed"><link rel="stylesheet" href="/observability-best-practices/ja/assets/css/styles.d16a0acd.css">
-<script src="/observability-best-practices/ja/assets/js/runtime~main.e097d663.js" defer="defer"></script>
+<script src="/observability-best-practices/ja/assets/js/runtime~main.668b3217.js" defer="defer"></script>
 <script src="/observability-best-practices/ja/assets/js/main.ca3648d3.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -22,7 +22,7 @@
 <p>すべての変更はビジネス価値を提供すべきです。</p>
 </blockquote>
 <p>— ITIL サービストランジション、AXELOS、2011年、44ページ。<br>
-<!-- -->— <a href="https://docs.aws.amazon.com/ja_jp/whitepapers/latest/change-management-in-the-cloud/change-management-in-the-cloud.html" target="_blank" rel="noopener noreferrer">Change Management in the Cloud AWS ホワイトペーパー</a> を参照</p>
+<!-- -->— <a href="https://docs.aws.amazon.com/whitepapers/latest/change-management-in-the-cloud/change-management-in-the-cloud.html" target="_blank" rel="noopener noreferrer">Change Management in the Cloud AWS ホワイトペーパー</a> を参照</p>
 <p>ミッションとビジネス価値が重要なのは、それらがあなたの行うすべてのことに情報を与えるべきだからです。オブザーバビリティには多くの利点があります。これらには以下が含まれます：</p>
 <ul>
 <li>可用性の向上</li>
@@ -35,7 +35,7 @@
 <li>運用コストの削減</li>
 <li>自動化</li>
 </ul>
-<p>これらの利点にはすべて共通点があります。それらはすべて、直接的に顧客に、または間接的  に組織にビジネス価値を提供します。オブザーバビリティについて考える際は、アプリケーションがビジネス価値を提供しているかどうかを考えることに立ち返るべきです。</p>
+<p>これらの利点にはすべて共通点があります。それらはすべて、直接的に顧客に、または間接的に組  織にビジネス価値を提供します。オブザーバビリティについて考える際は、アプリケーションがビジネス価値を提供しているかどうかを考えることに立ち返るべきです。</p>
 <p>つまり、オブザーバビリティはビジネス価値の提供に貢献するものを測定し、ビジネス成果とそれらが危険にさらされているときに焦点を当てるべきです：顧客が望むこと、必要とすることについて考える必要があります。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="どこから始めればよいですか">どこから始めればよいですか？<a class="hash-link" aria-label="どこから始めればよいですか？ への直接リンク" title="どこから始めればよいですか？ への直接リンク" href="/observability-best-practices/ja/guides/operational/business/monitoring-for-business-outcomes#どこから始めればよいですか">​</a></h2>
 <p>重要なことがわかったら、次に何を測定する必要があるかを考える必要があります。Amazon では、顧客から始めて、彼らのニーズから逆算して考えます：</p>
@@ -54,18 +54,18 @@
 <p>顧客が気にすることがわかったら、それらを測定し、ビジネスの成果にどのように影響するかを測定し始めることができます。ページ速度は、コンバージョン率と検索エンジンランキングに直接影響します。2017年の調査では、モバイルユーザーの半数以上（53％）が、ページの読み込みに3秒以上かかると離脱することが示されています。もちろん、ページ速度の重要性を示す多くの研究があり、それは明らかに測定すべき指標ですが、測定して行動を起こす必要があります。なぜなら、それはコンバージョンに測定可能な影響を与え、そのデータを使って改善を行うことができるからです。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="working-backwards">Working Backwards<a class="hash-link" aria-label="Working Backwards への直接リンク" title="Working Backwards への直接リンク" href="/observability-best-practices/ja/guides/operational/business/monitoring-for-business-outcomes#working-backwards">​</a></h2>
 <p>お客様が気にしていることをすべて知っているとは限りません。これを読んでいる方は、おそらく技術的な役割を担っているでしょう。組織内のステークホルダーと話をする必要がありますが、これは必ずしも簡単ではありません。しかし、重要なことを測定していることを確認するためには不可欠です。</p>
-<p>e コマースの例を続けてみましょう。今回は検索について考えてみます。顧客が商品を購入するためには検索機能が必要であることは明白かもしれません。しか  し、<a href="https://www.forrester.com/report/MustHave+eCommerce+Features/-/E-RES89561" target="_blank" rel="noopener noreferrer">Forrester Research のレポート</a>によると、訪問者の 43% が即座に検索ボックスに向かい、検索を使用する人は使用しない人と比べて 2〜3 倍の確率で購入に至ることをご存知でしたか？ 検索は非常に重要で、うまく機能する必要があり、モニタリングが必要です。特定の検索が結果を生み出していないことに気づき、単純なパターンマッチングから自然言語処理に移行する必要があるかもしれません。これは、ビジネス成果をモニタリングし、顧客体験を改善するために行動する例です。</p>
+<p>e コマースの例を続けてみましょう。今回は検索について考えてみます。顧客が商品を購入するためには検索機能が必要であることは明白かもしれません。しかし、<a href="https://www.forrester.com/report/MustHave+eCommerce+Features/-/E-RES89561" target="_blank" rel="noopener noreferrer">Forrester Research のレポート</a>によると、訪問者の 43% が即座に検索ボックスに向かい、検索を使用する人は使用しない人と比べて 2〜3 倍の確率で購入に至ることをご存知でしたか？ 検索は非常に重要で、うまく機能する必要があり、モニタリングが必要です。特定の検索が結果を生み出していないことに気づき、単純なパターンマッチングから自然言語処理に移行する必要があるかもしれません。これは、ビジネス成果をモニタリングし、顧客体験を改善するために行動する例です。</p>
 <p>Amazon では：</p>
 <blockquote>
 <p>私たちは、顧客を深く理解し、彼らの痛点から逆算して、彼らの生活に意味のあるソリューションを生み出すイノベーションを迅速に開発するよう努めています。</p>
 </blockquote>
 <p>— Daniel Slater - Worldwide Lead, Culture of Innovation, AWS (<a href="https://aws.amazon.com/jp/executive-insights/content/how-amazon-defines-and-operationalizes-a-day-1-culture/" target="_blank" rel="noopener noreferrer">Elements of Amazon&#x27;s Day 1 Culture</a> より)</p>
 <p>私たちは顧客から始め、彼らのニーズから逆算して考えます。これがビジネスで成功する唯一のアプローチではありませんが、オブザーバビリティにとっては良いアプローチです。ステークホルダーと協力して顧客にとって重要なことを理解し、そこから逆算して考えてください。</p>
-<p>さらなる利点として、顧客やステークホルダーにとって重要なメトリクスを収集すれば、ほぼリアルタイムのダッシュボードで可視化でき、「ランディングページの読み込みにどれくらい時間がかかっているか？」や「ウェブサイトの運用コストはいくらか？」といった質問に答えるためのレポート作成を避けることができます。ステークホルダーや経営陣がこの情報をセルフサービスで入手できるようにすべきです。</p>
+<p>さらなる利点として、顧客やステークホルダーにとって重要なメトリクスを収集すれば、ほぼリアルタイムのダッシュボードで可視化でき、「ランディングページの読み込みにどれくらい時間がかかっているか？」や「ウェブサイトの  運用コストはいくらか？」といった質問に答えるためのレポート作成を避けることができます。ステークホルダーや経営陣がこの情報をセルフサービスで入手できるようにすべきです。</p>
 <p>これらは、アプリケーションにとって<strong>本当に重要な</strong>高レベルのメトリクスであり、また問題があることを示す最良の指標でもあります。例えば、ある期間に通常期待される注文数よりも少ないことを示すアラートは、おそらく顧客に影響を与える問題があることを示しています。一方、サーバーのボリュームがほぼ満杯であることや、特定のサービスで 5xx エラーが多数発生していることを示すアラートは、修正が必要かもしれませんが、顧客への影響を理解し、それに応じて優先順位をつける必要があります。これには時間がかかる場合があります。</p>
 <p>これらの高レベルのビジネスメトリクスを測定していれば、顧客に影響を与える問題を簡単に特定できます。これらのメトリクスは<strong>何が</strong>起こっているかを示します。その他のメトリクスやトレーシング、ログなどの他の形式のオブザーバビリティは、<strong>なぜ</strong>これが起こっているかを示し、それを修正または改善するために何ができるかを導き出します。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="観察すべきこと">観察すべきこと<a class="hash-link" aria-label="観察すべきこと への直接リンク" title="観察すべきこと への直接リンク" href="/observability-best-practices/ja/guides/operational/business/monitoring-for-business-outcomes#観察すべきこと">​</a></h2>
-<p>顧客にとって重要なことが分かったら、重要業績評価指標（KPI）を特定できます。これらは、ビジネス成  果がリスクにさらされているかどうかを示す高レベルの指標です。また、これらの KPI に影響を与える可能性のある多くの異なるソースから情報を収集する必要があります。ここで、KPI に影響を与える可能性のあるメトリクスについて考え始める必要があります。先ほど述べたように、5xx エラーの数は影響を示すものではありませんが、KPI に影響を与える可能性があります。ビジネス成果に影響を与えるものから、ビジネス成果に影響を与える可能性のあるものまで、逆算して考えてください。</p>
+<p>顧客にとって重要なことが分かったら、重要業績評価指標（KPI）を特定できます。これらは、ビジネス成果が  リスクにさらされているかどうかを示す高レベルの指標です。また、これらの KPI に影響を与える可能性のある多くの異なるソースから情報を収集する必要があります。ここで、KPI に影響を与える可能性のあるメトリクスについて考え始める必要があります。先ほど述べたように、5xx エラーの数は影響を示すものではありませんが、KPI に影響を与える可能性があります。ビジネス成果に影響を与えるものから、ビジネス成果に影響を与える可能性のあるものまで、逆算して考えてください。</p>
 <p>収集すべきものが分かったら、KPI を測定するためのメトリクスと、それらの KPI に影響を与える可能性のある関連メトリクスを提供する情報源を特定する必要があります。これが観察の基礎となります。</p>
 <p>このデータは、メトリクス、ログ、トレースから得られる可能性が高いです。このデータを入手したら、成果がリスクにさらされたときにアラートを出すために使用できます。</p>
 <p>その後、影響を評価し、問題の修正を試みることができます。ほとんどの場合、このデータは、CPU やメモリなどの単独の技術的なメトリクスよりも先に問題を示してくれます。</p>
